@@ -10,6 +10,12 @@ class Risk extends Model
     use HasFactory;
 
     protected $fillable = [
-        'record_id', 'physicist', 'chemical', 'biological', 'ergonomic', 'accident', 'other'
+        'record_id',
+        'physicist',
+        'chemical',
+        'biological',
+        'ergonomic',
+        'accident',
+        'other'
     ];
 }

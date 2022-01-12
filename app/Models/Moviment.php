@@ -10,6 +10,15 @@ class Moviment extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'record_id', 'status', 'print', 'datExe', 'note'
+        'user_id',
+        'record_id',
+        'datSta',
+        'horSta',
+        'note',
     ];
+
+    public function user()
+    {
+        return $this->belongsTo(User::class)->withDefault();
+    }
 }

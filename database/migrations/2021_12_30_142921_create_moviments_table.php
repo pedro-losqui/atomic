@@ -17,9 +17,8 @@ class CreateMovimentsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id')->nullable();
             $table->unsignedBigInteger('record_id')->nullable();
-            $table->enum('status', ['1', '2', '3', '4'])->default('1');
-            $table->enum('print', ['0', '1'])->default('0');
-            $table->string('datExe', 10)->nullable();
+            $table->string('datSta', 10)->nullable();
+            $table->string('horSta', 15)->nullable();
             $table->mediumText('note')->nullable();
             $table->timestamps();
 

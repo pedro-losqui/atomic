@@ -10,6 +10,7 @@ class Exam extends Model
     use HasFactory;
 
     protected $fillable = [
-        'record_id', 'description'
+        'record_id',
+        'description'
     ];
 }
