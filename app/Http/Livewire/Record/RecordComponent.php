@@ -61,6 +61,7 @@ class RecordComponent extends Component
     public function updatePrint()
     {
         $this->emit('risks', $this->record->id);
+        $this->emit('updateWork', $this->record->id);
         $this->record->print = '1';
         $this->record->save();
         $this->emit('moviment', $this->record->id, 1, 5);
@@ -79,6 +80,7 @@ class RecordComponent extends Component
         $this->modal('recordModal', 'show');
         $this->getMoviments();
         $this->getExams();
+        $this->getWork();
     }
 
     public function modal($name, $action)
@@ -98,6 +100,11 @@ class RecordComponent extends Component
     public function getExams()
     {
         $this->emit('getExams', $this->record->id);
+    }
+
+    public function getWork()
+    {
+        $this->emit('getWork', $this->record->id);
     }
 
     public function resetPage()

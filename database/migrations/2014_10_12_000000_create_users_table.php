@@ -18,6 +18,8 @@ class CreateUsersTable extends Migration
             $table->string('name');
             $table->string('login')->unique();
             $table->string('password');
+            $table->enum('status', ['0', '1'])->default('1');
+            $table->string('avatar')->default('assets/images/users/avatar-0.jpg');
             $table->timestamps();
         });
     }

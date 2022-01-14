@@ -272,7 +272,7 @@
                             <td width="100%" class="m0111" valign="top">
                                 <table border="0" width="100%" cellspacing="0" cellpadding="0">
                                     <tbody>
-                                        @if ($employee->risk->physicist)
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: #009966;"><b>Físicos:</b></td>
                                                 <td width="90%" valign="top" class="m0000">
@@ -280,7 +280,7 @@
                                                 </td>
                                             </tr>
                                         @endif
-                                        @if ($employee->risk['chemical'])
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: red;"><b>Químicos:</b></td>
                                                 <td width="90%" valign="top" class="m0000">
@@ -288,7 +288,7 @@
                                                 </td>
                                             </tr>
                                         @endif
-                                        @if ($employee->risk['biological'])
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: rgb(107, 74, 74);"><b>Biológicos:</b></td>
                                                 <td width="90%" valign="top" class="m0000">
@@ -296,7 +296,7 @@
                                                 </td>
                                             </tr>
                                         @endif
-                                        @if ($employee->risk['ergonomic'])
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: rgb(161, 161, 39);"><b>Ergonômicos:</b></td>
                                                 <td width="90%" valign="top" class="m0000">
@@ -304,7 +304,7 @@
                                                 </td>
                                             </tr>
                                         @endif
-                                        @if ($employee->risk['accident'])
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: #0000FF;"><b>Acidentais :</b></td>
                                                 <td width="90%" valign="top" class="m0000">
@@ -312,7 +312,7 @@
                                                 </td>
                                             </tr>
                                         @endif
-                                        @if ($employee->risk['other'])
+                                        @if ($employee->risk)
                                             <tr>
                                                 <td width="10%" valign="top" style="color: #e49329;"><b>Outros :</b></td>
                                                 <td width="90%" valign="top" class="m0000">

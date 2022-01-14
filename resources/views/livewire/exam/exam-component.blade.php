@@ -1,6 +1,6 @@
-<div>
+<div class="card-body">
     <div class="table-responsive">
-        <table class="table table-centered table-nowrap mb-0">
+        <table class="table table-bordered mb-0">
             <thead>
                 <tr>
                     <th scope="col">Exame</th>
@@ -14,7 +14,7 @@
                             <p class="mb-1 font-size-12">Descrição</p>
                             <h5 class="font-size-12 mb-0">{{ $item->description }}</h5>
                         </td>
-                        <td>
+                        <td style="width: 2cm">
                             <button type="button" wire:click='delete({{ $item->id }})'
                                 class="btn btn-danger btn-sm">Excluir</button>
                         </td>

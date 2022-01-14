@@ -147,13 +147,16 @@
 
                         <div class="tab-pane" id="profile-1" role="tabpanel">
                             <h4 class="card-title">Status atual:</h4>
-                            <p class="card-title-desc">{{ $record->presenter()->tagStatus($record->status) }}
-                            </p>
+                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                <i class="ri-error-warning-line align-middle me-2"></i> {{ $record->presenter()->tagStatus($record->status) }}
+                            </button>
                             <hr>
                             <livewire:moviment.moviment-component />
                         </div>
 
                         <div class="tab-pane" id="messages-1" role="tabpanel">
+                            <livewire:work.work-component />
+                            <hr>
                             <livewire:risk.risk-component />
                             <hr>
                             <livewire:exam.exam-component />
@@ -165,17 +168,17 @@
                                             class="btn btn-primary waves-effect waves-light">
                                             <i class="ri-check-line align-middle me-1"></i> Gerar Kit
                                         </button>
-                                    @endif
-                                    <a href="{{ route('print', $record->id ? $record->id : 0) }}" target="_blank">
-                                        <button type="button" class="btn btn-primary waves-effect waves-light"
-                                            {{ $record->print == 1 ? '' : 'disabled' }}>
-                                            <i class="ri-printer-line align-middle me-1"></i> Imprimir Kit
+                                    @else
+                                        <a href="{{ route('print', $record->id ? $record->id : 0) }}"
+                                            target="_blank">
+                                            <button type="button" class="btn btn-primary waves-effect waves-light">
+                                                <i class="ri-printer-line align-middle me-1"></i> Imprimir Kit
+                                            </button>
+                                        </a>
+                                        <button type="button" class="btn btn-primary waves-effect waves-light" disabled>
+                                            <i class="ri-mail-send-line align-middle me-1"></i> Enviar Kit
                                         </button>
-                                    </a>
-                                    <button type="button" class="btn btn-primary waves-effect waves-light" disabled
-                                        {{ $record->print == 1 ? '' : 'disabled' }}>
-                                        <i class="ri-mail-send-line align-middle me-1"></i> Enviar Kit
-                                    </button>
+                                    @endif
                                 </div>
                             </div>
                         </div>

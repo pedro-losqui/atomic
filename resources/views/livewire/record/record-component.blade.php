@@ -10,11 +10,36 @@
         <div class="col-lg-12">
             <div class="card">
                 <div class="card-body">
-                    <form class="row row-cols-lg-auto g-5 align-items-center">
+                    <form class="row row-cols-lg-auto g-3 align-items-center">
                         <div class="col-12">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="mdi mdi-account-search-outline"></i></div>
                                 <input type="search" wire:model='search' class="form-control" placeholder="Busca">
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="ri-survey-line"></i></div>
+                                <select wire:model='status' class="form-select">
+                                    <option value="0">Status...</option>
+                                    <option value="1" selected>Solicitado</option>
+                                    <option value="2">Agendado</option>
+                                    <option value="3">Recebido</option>
+                                    <option value="4">Conclído</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="input-group">
+                                <div class="input-group-text"><i class="ri-coupon-line"></i></div>
+                                <select wire:model='attendance' class="form-select">
+                                    <option value="0">Atendimento...</option>
+                                    <option value="1">Admissional</option>
+                                    <option value="2">Periódico</option>
+                                    <option value="3">Mudança de função</option>
+                                    <option value="4">Retorno ao Trabalho</option>
+                                    <option value="5">Demissional</option>
+                                </select>
                             </div>
                         </div>
                         <div class="col-12">
@@ -26,25 +51,6 @@
                             <div class="input-group">
                                 <input type="date" wire:model='to' class="form-control">
                             </div>
-                        </div>
-                        <div class="col-12">
-                            <select wire:model='status' class="form-select">
-                                <option value="0">Status...</option>
-                                <option value="1" selected>Solicitado</option>
-                                <option value="2">Agendado</option>
-                                <option value="3">Recebido</option>
-                                <option value="4">Conclído</option>
-                            </select>
-                        </div>
-                        <div class="col-12">
-                            <select wire:model='attendance' class="form-select">
-                                <option value="0">Atendimento...</option>
-                                <option value="1">Admissional</option>
-                                <option value="2">Periódico</option>
-                                <option value="3">Mudança de função</option>
-                                <option value="4">Retorno ao Trabalho</option>
-                                <option value="5">Demissional</option>
-                            </select>
                         </div>
                         <div class="col-12">
                             <button type="button" wire:click='resetPage' class="btn btn-primary">
@@ -88,16 +94,18 @@
                                         </td>
                                         <td>
                                             <p class="mb-1 font-size-12">Data Solicitação</p>
-                                            {{ $item->created_at->format('d/m/Y')}}
+                                            {{ $item->created_at->format('d/m/Y') }}
                                         </td>
                                         <td>
                                             <label class="btn btn-primary">
-                                                <input type="button" wire:click='find({{ $item->id }})' class="btn-check">
-                                                <i class="mdi mdi-account-box-multiple md-24"></i>
+                                                <input type="button" wire:click='find({{ $item->id }})'
+                                                    class="btn-check">
+                                                <i class="ri-attachment-2 md-20"></i>
                                             </label>
                                             <label class="btn btn-primary">
-                                                <input type="button" wire:click='findStatus({{ $item->id }})' class="btn-check">
-                                                <i class="mdi mdi-refresh md-20"></i>
+                                                <input type="button" wire:click='findStatus({{ $item->id }})'
+                                                    class="btn-check">
+                                                <i class="ri-arrow-left-right-fill md-20"></i>
                                             </label>
                                         </td>
                                     </tr>

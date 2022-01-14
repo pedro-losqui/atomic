@@ -11,7 +11,7 @@
                     <div class="card-body">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="card-title mb-4">Wizard with progressbar</h4>
+                                <h4 class="card-title mb-4">Barra de progresso: <strong>{{ $record->nomColaborador }}</strong></h4>
 
                                 <div id="progrss-wizard" class="twitter-bs-wizard">
                                     <ul class="twitter-bs-wizard-nav nav-justified nav nav-pills">

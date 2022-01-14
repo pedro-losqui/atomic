@@ -37,7 +37,7 @@
                         </button>
                     </div>
 
-                    @include('modules.message')
+                    <livewire:chat-notification.chat-notification-component />
 
                     <div class="dropdown d-inline-block user-dropdown">
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
@@ -99,6 +99,7 @@
     <script src="{{ asset('assets/js/app.js') }}"></script>
     <livewire:scripts />
     <script src="{{ asset('assets/js/pages/modal.js') }}"></script>
+    <script src="{{ asset('assets/js/pages/alert.js') }}"></script>
 </body>
 
 </html>
