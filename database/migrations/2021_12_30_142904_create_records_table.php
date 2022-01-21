@@ -47,6 +47,7 @@ class CreateRecordsTable extends Migration
             $table->mediumText('obsSolicitacao')->nullable();
             $table->enum('status', ['1', '2', '3', '4'])->default('1');
             $table->enum('print', ['0', '1'])->default('0');
+            $table->enum('visualization', ['0', '1'])->default('0');
             $table->string('datExe', 10)->nullable();
             $table->timestamps();
         });

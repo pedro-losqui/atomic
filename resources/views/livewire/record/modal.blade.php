@@ -148,7 +148,8 @@
                         <div class="tab-pane" id="profile-1" role="tabpanel">
                             <h4 class="card-title">Status atual:</h4>
                             <button type="button" class="btn btn-primary waves-effect waves-light">
-                                <i class="ri-error-warning-line align-middle me-2"></i> {{ $record->presenter()->tagStatus($record->status) }}
+                                <i class="ri-error-warning-line align-middle me-2"></i>
+                                {{ $record->presenter()->tagStatus($record->status) }}
                             </button>
                             <hr>
                             <livewire:moviment.moviment-component />
@@ -182,7 +183,6 @@
                                 </div>
                             </div>
                         </div>
-
                     </div>
                 </div>
                 <div class="modal-footer">

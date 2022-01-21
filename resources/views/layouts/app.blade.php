@@ -43,16 +43,17 @@
                         <button type="button" class="btn header-item waves-effect" id="page-header-user-dropdown"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <img class="rounded-circle header-profile-user"
-                                src="{{ asset('assets/images/users/avatar-2.jpg') }}"
-                                alt="Header Avatar">
-                            <span class="d-none d-xl-inline-block ms-1">Pedro Losqui Soares</span>
+                                src="{{ asset( Auth::user()->avatar ) }}" alt="Header Avatar">
+                            <span class="d-none d-xl-inline-block ms-1">{{ Auth::user()->name }}</span>
                         </button>
                     </div>
 
                     <div class="dropdown d-inline-block">
-                        <button type="button" class="btn header-item noti-icon right-bar-toggle waves-effect">
-                            <i class="mdi mdi-power"></i>
-                        </button>
+                        <form action="{{ route('logout') }}" method="post">
+                            <button type="submit" class="btn header-item noti-icon right-bar-toggle waves-effect">
+                                <i class="mdi mdi-power"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>

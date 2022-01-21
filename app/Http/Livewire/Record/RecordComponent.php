@@ -4,7 +4,9 @@ namespace App\Http\Livewire\Record;
 
 use App\Models\Record;
 use Livewire\Component;
+use App\Models\Moviment;
 use Livewire\WithPagination;
+use Illuminate\Support\Facades\Auth;
 
 class RecordComponent extends Component
 {
@@ -12,7 +14,7 @@ class RecordComponent extends Component
 
     public $record;
 
-    public $search, $attendance, $status, $from, $to, $date;
+    public $search, $attendance, $status, $from, $to, $date, $note;
 
     protected $rules = [
         'date' => 'required',
@@ -31,7 +33,8 @@ class RecordComponent extends Component
     public function render()
     {
         return view('livewire.record.record-component', [
-            'records' =>  Record::where(function ($query) {
+            'records' =>  Record::where('visualization', '0')
+            ->where(function ($query) {
                 $query->whereBetween('created_at', [$this->from, $this->to]);
                 if ($this->attendance != 0) {
                     $query->where('retTipExa', $this->attendance);
@@ -54,8 +57,9 @@ class RecordComponent extends Component
     {
         $this->record->status ++;
         $this->record->save();
-        $this->emit('moviment', $this->record->id, 1, $this->record->status);
+        $this->emit('moviment', $this->record->id, Auth::user()->id, $this->record->status);
         $this->modal('recordUpdate', 'hide');
+        session()->flash('message.success', 'Status atualizado com sucesso.');
     }
 
     public function updatePrint()
@@ -64,7 +68,7 @@ class RecordComponent extends Component
         $this->emit('updateWork', $this->record->id);
         $this->record->print = '1';
         $this->record->save();
-        $this->emit('moviment', $this->record->id, 1, 5);
+        $this->emit('moviment', $this->record->id, Auth::user()->id, 5);
     }
 
     public function completion()
@@ -81,6 +85,13 @@ class RecordComponent extends Component
         $this->getMoviments();
         $this->getExams();
         $this->getWork();
+    }
+
+    public function findRecord($id)
+    {
+        $this->record = Record::find($id);
+        $this->modal('inactivationModal', 'show');
+        $this->getRecord();
     }
 
     public function modal($name, $action)
@@ -105,6 +116,11 @@ class RecordComponent extends Component
     public function getWork()
     {
         $this->emit('getWork', $this->record->id);
+    }
+
+    public function getRecord()
+    {
+        $this->emit('getRecord', $this->record->id);
     }
 
     public function resetPage()

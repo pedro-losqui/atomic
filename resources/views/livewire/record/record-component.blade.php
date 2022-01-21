@@ -1,10 +1,19 @@
 <div>
+
+    @if(session()->has('message.success'))
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            <strong>Ok!</strong> {{ session('message.success') }}
+        </div>
+    @endif
+
     <livewire:search.search-component />
 
     <livewire:header.header-count-component />
 
     @include('livewire.record.modal')
     @include('livewire.record.update')
+    @include('livewire.record.inactivationModal')
 
     <div class="row">
         <div class="col-lg-12">
@@ -97,16 +106,20 @@
                                             {{ $item->created_at->format('d/m/Y') }}
                                         </td>
                                         <td>
-                                            <label class="btn btn-primary">
-                                                <input type="button" wire:click='find({{ $item->id }})'
-                                                    class="btn-check">
-                                                <i class="ri-attachment-2 md-20"></i>
-                                            </label>
-                                            <label class="btn btn-primary">
-                                                <input type="button" wire:click='findStatus({{ $item->id }})'
-                                                    class="btn-check">
-                                                <i class="ri-arrow-left-right-fill md-20"></i>
-                                            </label>
+                                            <div class="btn-group btn-sm btn-group-toggle" data-bs-toggle="buttons">
+                                                <label class="btn btn-secondary">
+                                                    <input type="button" wire:click='find({{ $item->id }})' class="btn-check"> <i
+                                                        class="ri-attachment-2"></i>
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="button" wire:click='findStatus({{ $item->id }})' class="btn-check"> <i
+                                                        class="ri-arrow-left-right-fill"></i>
+                                                </label>
+                                                <label class="btn btn-secondary">
+                                                    <input type="button" wire:click='findRecord({{ $item->id }})' class="btn-check"> <i
+                                                        class="ri-download-2-line"></i>
+                                                </label>
+                                            </div>
                                         </td>
                                     </tr>
                                 @empty

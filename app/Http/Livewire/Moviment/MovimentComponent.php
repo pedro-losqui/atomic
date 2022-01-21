@@ -9,7 +9,7 @@ class MovimentComponent extends Component
 {
     public $moviment, $record_id;
 
-    protected $listeners = ['getMoviments', 'moviment', 'completion'];
+    protected $listeners = ['getMoviments', 'getInactivationMoviment', 'moviment', 'completion'];
 
     protected $rules = [
         'moviment.note' => 'required|string|min:4',
@@ -30,6 +30,15 @@ class MovimentComponent extends Component
     public function getMoviments($id)
     {
         $this->record_id = $id;
+    }
+
+    public function getInactivationMoviment($record_id, $user_id, $note)
+    {
+        Moviment::create([
+            'user_id' =>  $user_id,
+            'record_id' => $record_id,
+            'note' => $note['note'],
+        ]);
     }
 
     public function moviment($record_id, $user_id, $status)
@@ -88,5 +97,4 @@ class MovimentComponent extends Component
     {
         $this->moviment->note = '';
     }
-
 }
