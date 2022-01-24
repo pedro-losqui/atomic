@@ -1,5 +1,15 @@
 <div>
-    <div class="card-body">
+
+    <div class="col-md-6 mb-1" wire:loading wire:target="save">
+        <div class="button-list mb-1 mb-sm-0">
+            <button class="btn btn-primary" type="button" disabled="">
+                <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+                Enviando movimentação...
+            </button>
+        </div>
+    </div>
+
+    <div class="card-body" wire:target='save' wire:loading.remove>
         <h4 class="card-title mb-2">Movimentações</h4>
         @forelse($moviments as $item)
             <ul class="verti-timeline list-unstyled">

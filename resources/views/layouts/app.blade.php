@@ -50,6 +50,7 @@
 
                     <div class="dropdown d-inline-block">
                         <form action="{{ route('logout') }}" method="post">
+                            @csrf
                             <button type="submit" class="btn header-item noti-icon right-bar-toggle waves-effect">
                                 <i class="mdi mdi-power"></i>
                             </button>

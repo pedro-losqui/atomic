@@ -39,6 +39,8 @@
                     <div class="tab-content p-3">
                         <div class="tab-pane active" id="home-1" role="tabpanel">
                             <div class="card-body">
+                                <livewire:situation.situation-component />
+                                <hr>
                                 <div class="row row-cols-lg-auto g-5 align-items-center">
                                     <div class="col-sm-4">
                                         <h6>Empresa & Posto de Serviço</h6>

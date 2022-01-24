@@ -4,7 +4,7 @@ namespace App\Http\Livewire\Record;
 
 use App\Models\Record;
 use Livewire\Component;
-use App\Models\Moviment;
+use App\Repository\Soap;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Auth;
 
@@ -71,9 +71,11 @@ class RecordComponent extends Component
         $this->emit('moviment', $this->record->id, Auth::user()->id, 5);
     }
 
-    public function completion()
+    public function completion(Soap $soap)
     {
-        $this->validate();
+        $this->record->datExe = $this->validate()['date'];
+        $this->record->save();
+        $soap->RetornaCadastro($this->record);
         $this->updateStatus();
         $this->default();
     }
@@ -85,6 +87,7 @@ class RecordComponent extends Component
         $this->getMoviments();
         $this->getExams();
         $this->getWork();
+        $this->getStatus();
     }
 
     public function findRecord($id)
@@ -121,6 +124,11 @@ class RecordComponent extends Component
     public function getRecord()
     {
         $this->emit('getRecord', $this->record->id);
+    }
+
+    public function getStatus()
+    {
+        $this->emit('getStatus', $this->record->id);
     }
 
     public function resetPage()

@@ -11,7 +11,40 @@ class Record extends Model
     use HasFactory;
 
     protected $fillable = [
-
+        'cnpjFilial',
+        'cnpjPosto',
+        'codCargo',
+        'codEmpresa',
+        'codFilial',
+        'codLocal',
+        'codRateio',
+        'cpfColaborador',
+        'datSol',
+        'dataAdm',
+        'emaSolicitante',
+        'empSoc',
+        'exaSolicitado',
+        'fonSolicitante',
+        'masLocal',
+        'nasColaborador',
+        'nomCargo',
+        'nomColaborador',
+        'nomEmpresa',
+        'nomFilial',
+        'nomLaboratorio',
+        'nomPosto',
+        'nomRateio',
+        'nomSolicitante',
+        'numColab',
+        'retTipExa',
+        'sexColaborador',
+        'estAtual',
+        'estNova',
+        'obsSolicitacao',
+        'status',
+        'print',
+        'visualization',
+        'datExe',
     ];
 
     public function moviments()

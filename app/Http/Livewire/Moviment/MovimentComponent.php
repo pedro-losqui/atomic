@@ -2,8 +2,10 @@
 
 namespace App\Http\Livewire\Moviment;
 
-use App\Models\Moviment;
+use App\Models\Record;
 use Livewire\Component;
+use App\Models\Moviment;
+use App\Repository\Soap;
 
 class MovimentComponent extends Component
 {
@@ -12,7 +14,7 @@ class MovimentComponent extends Component
     protected $listeners = ['getMoviments', 'getInactivationMoviment', 'moviment', 'completion'];
 
     protected $rules = [
-        'moviment.note' => 'required|string|min:4',
+        'moviment.note' => 'required|string|min:4|max:250',
     ];
 
     public function mount(Moviment $moviment)
@@ -68,17 +70,23 @@ class MovimentComponent extends Component
         }
     }
 
-    public function save()
+    public function save(Soap $soap)
     {
         $this->validate();
-        Moviment::create([
+        $status = Moviment::create([
             'user_id' => 1,
             'record_id' => $this->record_id,
             'datSta' => $this->getDate(),
             'horSta' => $this->getHour(),
             'note' => $this->moviment->note,
         ]);
+        $soap->retornaStatusExa($this->findRecord($this->record_id), $status);
         $this->default();
+    }
+
+    public function findRecord($id)
+    {
+        return Record::find($id);
     }
 
     public function getDate()

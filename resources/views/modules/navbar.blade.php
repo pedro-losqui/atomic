@@ -23,6 +23,11 @@
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
                         </a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-cog-outline me-2"></i>Configurações
+                        </a>
+                    </li>
                 </ul>
             </div>
         </nav>

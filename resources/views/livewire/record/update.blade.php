@@ -7,12 +7,19 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <div class="card">
+
+                <div class="button-list mb-1 mb-sm-0" wire:loading wire:target="completion">
+                    <button class="btn btn-primary" type="button" disabled="">
+                        <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
+                        Processando...
+                    </button>
+                </div>
+
+                <div class="card" wire:target='completion' wire:loading.remove>
                     <div class="card-body">
                         <div class="card">
                             <div class="card-body">
                                 <h4 class="card-title mb-4">Barra de progresso: <strong>{{ $record->nomColaborador }}</strong></h4>
-
                                 <div id="progrss-wizard" class="twitter-bs-wizard">
                                     <ul class="twitter-bs-wizard-nav nav-justified nav nav-pills">
                                         <li class="nav-item">
@@ -48,6 +55,7 @@
                                 </div>
                             </div>
                         </div>
+
                         @if($record->status == 3)
                             <div class="col-lg-4">
                                 <div class="mb-3">
