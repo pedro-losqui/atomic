@@ -27,7 +27,7 @@
                                 </li>
                             @empty
                                 <div class="alert alert-danger mb-0" role="alert">
-                                    Nenhum registro foi localizado!
+                                    Nenhum registro foi localizado.
                                 </div>
                             @endforelse
                         </ol>

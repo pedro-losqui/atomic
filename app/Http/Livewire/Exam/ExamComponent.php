@@ -7,6 +7,7 @@ use Livewire\Component;
 
 class ExamComponent extends Component
 {
+
     public $description, $record_id;
 
     protected $listeners = ['getExams'];

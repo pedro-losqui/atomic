@@ -7,10 +7,11 @@ use Livewire\Component;
 use App\Repository\Soap;
 use Livewire\WithPagination;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class RecordComponent extends Component
 {
-    use WithPagination;
+    use WithPagination, AuthorizesRequests;
 
     public $record;
 
@@ -32,6 +33,8 @@ class RecordComponent extends Component
 
     public function render()
     {
+        $this->authorize('record.home', Auth::user()->can('record.home'));
+
         return view('livewire.record.record-component', [
             'records' =>  Record::where('visualization', '0')
             ->where(function ($query) {
@@ -49,6 +52,8 @@ class RecordComponent extends Component
 
     public function findStatus($id)
     {
+        $this->authorize('record.update', Auth::user()->can('record.update'));
+
         $this->record = Record::find($id);
         $this->modal('recordUpdate', 'show');
     }
@@ -92,6 +97,8 @@ class RecordComponent extends Component
 
     public function findRecord($id)
     {
+        $this->authorize('record.delete', Auth::user()->can('record.delete'));
+
         $this->record = Record::find($id);
         $this->modal('inactivationModal', 'show');
         $this->getRecord();

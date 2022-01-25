@@ -166,6 +166,7 @@ return [
          * Package Service Providers...
          */
         Artisaninweb\SoapWrapper\ServiceProvider::class,
+        Spatie\Permission\PermissionServiceProvider::class,
 
         /*
          * Application Service Providers...

@@ -9,7 +9,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('message') }}">
+                        <a class="nav-link" href="#">
                             <i class="mdi mdi-message-text-outline me-2"></i>Mensagens
                         </a>
                     </li>
@@ -19,7 +19,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{{ route('exam') }}">
+                        <a class="nav-link" href="#">
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
                         </a>
                     </li>

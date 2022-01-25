@@ -3,11 +3,15 @@
 namespace App\Http\Livewire\User;
 
 use App\Models\User;
-use Illuminate\Support\Facades\Hash;
 use Livewire\Component;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Hash;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class UserComponent extends Component
 {
+    use AuthorizesRequests;
+
     public $user;
 
     public $search, $user_id, $name, $login, $password, $password_confirm, $avatar;
@@ -30,6 +34,8 @@ class UserComponent extends Component
 
     public function render()
     {
+        $this->authorize('user.home', Auth::user()->can('user.home'));
+
         return view('livewire.user.user-component', [
             'users' => User::where('name', 'LIKE', "%{$this->search}%")->get()
         ]);
@@ -37,6 +43,8 @@ class UserComponent extends Component
 
     public function create()
     {
+        $this->authorize('user.create', Auth::user()->can('user.create'));
+
         $this->modal('userCreate', 'show');
     }
 
