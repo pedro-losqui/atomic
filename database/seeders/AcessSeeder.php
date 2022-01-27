@@ -70,12 +70,5 @@ class AcessSeeder extends Seeder
         $role2->givePermissionTo('message.home');
         $role2->givePermissionTo('message.update');
         $role2->givePermissionTo('config.home');
-
-        $user = \App\Models\User::factory()->create([
-            'name' => 'Administrador',
-            'login' => 'admin',
-            'password' => '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi',
-        ]);
-        $user->assignRole($role2);
     }
 }
