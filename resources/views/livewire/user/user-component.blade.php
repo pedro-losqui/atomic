@@ -1,17 +1,7 @@
 <div>
     @include('livewire.user.create')
+    @include('livewire.user.edit')
     <div class="row">
-
-        @if(session()->has('message'))
-            <div class="col-12" id="alert">
-                <div class="alert alert-success alert-dismissible fade show" role="alert">
-                    <button type="button" class="btn-close align-center" data-bs-dismiss="alert"
-                        aria-label="Close"></button>
-                    <strong>otimo!</strong> {{ session('message') }}
-                </div>
-            </div>
-        @endif
-
         <div class="col-10">
             <div class="card">
                 <div class="card-body">
@@ -65,7 +55,7 @@
                                         </td>
                                         <td>
                                             <label class="btn btn-primary">
-                                                <input type="button" wire:click='edit({{ $item->id }})' class="btn-check" disabled>
+                                                <input type="button" wire:click='edit({{ $item->id }})' class="btn-check">
                                                 Editar
                                             </label>
                                         </td>

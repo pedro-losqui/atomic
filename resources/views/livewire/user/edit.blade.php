@@ -56,26 +56,26 @@
                             <div class="mt-4 mt-lg-0">
                                 <h5 class="font-size-14 mb-3">Avatar</h5>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" wire:model='avatar'
-                                        id="inlineRadios1" value="assets/images/users/avatar-1.jpg" checked="">
+                                    <input class="form-check-input" type="radio" wire:model='avatar' id="inlineRadios1"
+                                        value="assets/images/users/avatar-1.jpg" checked="">
                                     <img class="rounded-circle avatar-sm" alt="200x200"
                                         src="assets/images/users/avatar-1.jpg" data-holder-rendered="true">
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" wire:model='avatar'
-                                        id="inlineRadios2" value="assets/images/users/avatar-2.jpg">
+                                    <input class="form-check-input" type="radio" wire:model='avatar' id="inlineRadios2"
+                                        value="assets/images/users/avatar-2.jpg">
                                     <img class="rounded-circle avatar-sm" alt="200x200"
                                         src="assets/images/users/avatar-2.jpg" data-holder-rendered="true">
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" wire:model='avatar'
-                                        id="inlineRadios3" value="assets/images/users/avatar-3.jpg">
+                                    <input class="form-check-input" type="radio" wire:model='avatar' id="inlineRadios3"
+                                        value="assets/images/users/avatar-3.jpg">
                                     <img class="rounded-circle avatar-sm" alt="200x200"
                                         src="assets/images/users/avatar-3.jpg" data-holder-rendered="true">
                                 </div>
                                 <div class="form-check form-check-inline">
-                                    <input class="form-check-input" type="radio" wire:model='avatar'
-                                        id="inlineRadios4" value="assets/images/users/avatar-4.jpg">
+                                    <input class="form-check-input" type="radio" wire:model='avatar' id="inlineRadios4"
+                                        value="assets/images/users/avatar-4.jpg">
                                     <img class="rounded-circle avatar-sm" alt="200x200"
                                         src="assets/images/users/avatar-4.jpg" data-holder-rendered="true">
                                 </div>
@@ -85,6 +85,20 @@
                                 @enderror
                             </div>
                         </div>
+                        <hr>
+                            <div class="row">
+                                <div class="col-md">
+                                    <div class="mb-3">
+                                        <label class="form-label" for="">Perfil de acesso</label>
+                                        <select id="inputState" wire:model='acess' class="form-select">
+                                            <option>Selecione</option>
+                                            @foreach($this->profile as $item)
+                                                <option value="{{ $item->name }}">{{ $item->name }}</option>
+                                            @endforeach
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
                     </form>
                 </div>
             </div>
