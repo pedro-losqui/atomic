@@ -45,7 +45,7 @@
                                     <option value="0">Atendimento...</option>
                                     <option value="1">Admissional</option>
                                     <option value="2">Periódico</option>
-                                    <option value="3">Mudança de função</option>
+                                    <option value="3">Mudança de Riscos Ocupacionais</option>
                                     <option value="4">Retorno ao Trabalho</option>
                                     <option value="5">Demissional</option>
                                 </select>
