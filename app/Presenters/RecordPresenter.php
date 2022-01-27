@@ -51,7 +51,7 @@ class RecordPresenter
                 return 'Periódico';
             break;
             case 3:
-                return 'Mudança de Função';
+                return 'Mudança de Riscos Ocupacionais';
             break;
             case 4:
                 return 'Retorno ao Trabalho';

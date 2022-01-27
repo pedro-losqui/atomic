@@ -60,9 +60,13 @@ class UserComponent extends Component
 
     public function save()
     {
-        $data = $this->validate();
-        $this->hash();
-        User::create($data);
+        $this->validate();
+        User::create([
+            'name' => $this->name,
+            'login' => $this->name,
+            'password' => Hash::make($this->password),
+            'avatar' => $this->avatar,
+        ]);
         $this->modal('userCreate', 'hide');
         session()->flash('message', 'Usuário cadastrado com sucesso.');
         $this->default();
@@ -79,19 +83,17 @@ class UserComponent extends Component
 
     public function update()
     {
-        if ($this->password) {
-            $this->hash();
-        }
 
         $this->user->update([
             'name' => $this->name,
             'login'=> $this->login,
-            'password' => $this->password,
         ]);
 
         if ($this->acess) {
             $this->user->assignRole($this->acess);
         }
+
+        $this->modal('userEdit', 'hide');
     }
 
     public function modal($name, $action)
@@ -101,11 +103,6 @@ class UserComponent extends Component
             'action' => $action,
             'name' => $name,
         ]);
-    }
-
-    public function hash()
-    {
-        $this->password = Hash::make($this->password);
     }
 
     public function default()
