@@ -91,7 +91,7 @@ class Soap
                 'tipExe'            => $data->retTipExa,
                 'datSta'            => $status->datSta,
                 'horSta'            => $status->horSta,
-                'msgRet'            => $status->msgRet,
+                'msgRet'            => $status->note,
             ]
         ]);
     }

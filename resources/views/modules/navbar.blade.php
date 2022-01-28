@@ -13,11 +13,7 @@
                             <i class="mdi mdi-message-text-outline me-2"></i>Mensagens
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('user') }}">
-                            <i class="mdi mdi-account-plus-outline me-2"></i>Usuários
-                        </a>
-                    </li>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
                         <a class="nav-link" href="#">
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
@@ -25,7 +21,17 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">
-                            <i class="mdi mdi-cog-outline me-2"></i>Configurações
+                            <i class="mdi mdi-chart-line-variant me-2"></i>Desempenho
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">
+                            <i class="mdi mdi-tools me-2"></i>Ferramentas
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('user') }}">
+                            <i class="mdi mdi-account-plus-outline me-2"></i>Usuários
                         </a>
                     </li>
                 </ul>
