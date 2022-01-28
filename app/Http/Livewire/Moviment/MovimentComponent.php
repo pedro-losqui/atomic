@@ -6,6 +6,7 @@ use App\Models\Record;
 use Livewire\Component;
 use App\Models\Moviment;
 use App\Repository\Soap;
+use Illuminate\Support\Facades\Auth;
 
 class MovimentComponent extends Component
 {
@@ -74,7 +75,7 @@ class MovimentComponent extends Component
     {
         $this->validate();
         $status = Moviment::create([
-            'user_id' => 1,
+            'user_id' => Auth::user()->id,
             'record_id' => $this->record_id,
             'datSta' => $this->getDate(),
             'horSta' => $this->getHour(),
