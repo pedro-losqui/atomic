@@ -144,6 +144,18 @@
                                     </div>
                                     <hr>
                                 </div>
+                                <hr>
+                                <div class="row row-cols-lg-auto g-5 align-items-center">
+                                    <div class="col-sm-4">
+                                        <h6>Dados do Solicitante</h6>
+                                        <address>
+                                            <strong>Solicitante:</strong> {{ $record->nomSolicitante }}<br>
+                                            <strong>Telefone:</strong> {{ $record->fonSolicitante }}<br>
+                                            <strong>E-mail:</strong> {{ $record->emaSolicitante }}<br>
+                                        </address>
+                                    </div>
+                                    <hr>
+                                </div>
                             </div>
                         </div>
 
