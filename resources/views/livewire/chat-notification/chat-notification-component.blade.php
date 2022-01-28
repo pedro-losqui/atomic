@@ -2,7 +2,7 @@
     <button type="button" class="btn header-item noti-icon waves-effect" id="page-header-notifications-dropdown"
         data-bs-toggle="dropdown" aria-expanded="false">
         <i class="ri-notification-3-line"></i>
-        @if($messages)
+        @if($notification > 0)
             <span class="noti-dot"></span>
         @endif
     </button>

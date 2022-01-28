@@ -78,4 +78,11 @@ class RecordPresenter
     {
        return date('Y') - intval(substr($value, 6, 4));
     }
+
+
+    public function treeView($value)
+    {
+        return explode(";", $value);
+    }
+
 }

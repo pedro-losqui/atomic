@@ -34,7 +34,7 @@
                                     <option value="1" selected>Solicitado</option>
                                     <option value="2">Agendado</option>
                                     <option value="3">Recebido</option>
-                                    <option value="4">Conclído</option>
+                                    <option value="4">Concluído</option>
                                 </select>
                             </div>
                         </div>

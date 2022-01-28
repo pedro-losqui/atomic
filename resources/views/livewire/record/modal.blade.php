@@ -85,22 +85,11 @@
                                             <h6>Setor e Função Atual</h6>
                                             <ul class="mb-1 pl-3 pb-2">
                                                 <li><i class="fas fa-angle-right rotate"></i>
-                                                    <span><i class="far fa-envelope-open ic-w mx-1"></i>Mail</span>
+                                                    <span><i class="fas fa-list-ul ic-w mx-1"></i></span>
                                                     <ul class="nested">
-                                                        <li><i class="far fa-bell ic-w mr-1"></i> Offers</li>
-                                                        <li><i class="far fa-address-book ic-w mr-1"></i>Contacts</li>
-                                                        <li><i class="fas fa-angle-right rotate"></i>
-                                                            <span><i
-                                                                    class="far fa-calendar-alt ic-w mx-1"></i>Calendar</span>
-                                                            <ul class="nested">
-                                                                <li><i class="far fa-clock ic-w mr-1"></i>Deadlines</li>
-                                                                <li><i class="fas fa-users ic-w mr-1"></i>Meetings</li>
-                                                                <li><i
-                                                                        class="fas fa-basketball-ball ic-w mr-1"></i>Workouts
-                                                                </li>
-                                                                <li><i class="fas fa-mug-hot ic-w mr-1"></i>Events</li>
-                                                            </ul>
-                                                        </li>
+                                                        @foreach ($record->presenter()->treeView($record->estAtual) as $item)
+                                                            <li> {{ $item }}</li>
+                                                        @endforeach
                                                     </ul>
                                                 </li>
                                             </ul>
@@ -110,23 +99,11 @@
                                             <h6>Setor e Função Proposto</h6>
                                             <ul class="mb-1 pl-3 pb-2">
                                                 <li><i class="fas fa-angle-right rotate"></i>
-                                                    <span><i class="far fa-envelope-open ic-w mx-1"></i>Mail</span>
+                                                    <span><i class="fas fa-list-ul ic-w mx-1"></i></span>
                                                     <ul class="nested">
-                                                        <li><i class="far fa-bell ic-w mr-1"></i> Offers</li>
-                                                        <li><i class="far fa-address-book ic-w mr-1"></i> Contacts</li>
-                                                        <li><i class="fas fa-angle-right rotate"></i>
-                                                            <span><i class="far fa-calendar-alt ic-w mx-1"></i>
-                                                                Calendar</span>
-                                                            <ul class="nested">
-                                                                <li><i class="far fa-clock ic-w mr-1"></i> Deadlines
-                                                                </li>
-                                                                <li><i class="fas fa-users ic-w mr-1"></i> Meetings</li>
-                                                                <li><i class="fas fa-basketball-ball ic-w mr-1"></i>
-                                                                    Workouts
-                                                                </li>
-                                                                <li><i class="fas fa-mug-hot ic-w mr-1"></i> Events</li>
-                                                            </ul>
-                                                        </li>
+                                                        @foreach ($record->presenter()->treeView($record->estNova) as $item)
+                                                            <li> {{ $item }}</li>
+                                                        @endforeach
                                                     </ul>
                                                 </li>
                                             </ul>
