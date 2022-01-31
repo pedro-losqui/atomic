@@ -4,6 +4,13 @@ namespace App\Presenters;
 
 class RecordPresenter
 {
+    public function alert($date, $status, $print)
+    {
+        if ($status == 1 && $print == 0) {
+           return $date;
+        }
+    }
+
     public function tagStatus($value)
     {
         switch ($value) {
@@ -78,7 +85,6 @@ class RecordPresenter
     {
        return date('Y') - intval(substr($value, 6, 4));
     }
-
 
     public function treeView($value)
     {
