@@ -8,8 +8,6 @@ use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 class Kernel extends ConsoleKernel
 {
     protected $commands = [
-        Commands\saveZero::class,
-        Commands\saveOne::class,
     ];
 
     /**
@@ -20,8 +18,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('save:zero')->everyTwoMinutes();
-        $schedule->command('save:one')->everyThreeMinutes();
+        $schedule->command('save:zero')->everyMinute();
+        $schedule->command('save:one')->everyTwoMinutes();
     }
 
     /**
