@@ -339,7 +339,7 @@
                         </tr>
                         <tr>
                             <td width="100%" class="m0111">
-                                &nbsp;{{ $employee->presenter()->tagExam($employee->retTipExa) }}
+                                &nbsp;{{ $employee->presenter()->tagExamAso($employee->retTipExa) }}
                             </td>
                         </tr>
                     </tbody>
@@ -574,7 +574,7 @@
                                 <td class="m0000" style="font-weight: bold" nowrap="">Tipo de Exame</td>
                             </tr>
                             <tr>
-                                <td class="m0000" nowrap="">{{ $employee->presenter()->tagExam($employee->retTipExa) }}</td>
+                                <td class="m0000" nowrap="">{{ $employee->presenter()->tagExamAso($employee->retTipExa) }}</td>
                             </tr>
                         </tbody>
                     </table>
@@ -1016,7 +1016,7 @@
                             <td class="s0000" style="font-weight:bold">&nbsp;Tipo de Exame</td>
                         </tr>
                         <tr>
-                            <td class="s0000">&nbsp;{{ $employee->presenter()->tagExam($employee->retTipExa) }}</td>
+                            <td class="s0000">&nbsp;{{ $employee->presenter()->tagExamAso($employee->retTipExa) }}</td>
                         </tr>
                     </tbody>
                 </table>

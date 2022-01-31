@@ -72,6 +72,30 @@ class RecordPresenter
         }
     }
 
+    public function tagExamAso($value)
+    {
+        switch ($value) {
+            case 1:
+                return 'Admissional';
+            break;
+            case 2:
+                return 'Periódico';
+            break;
+            case 3:
+                return 'Mudança de Riscos Ocupacionais';
+            break;
+            case 4:
+                return 'Retorno ao Trabalho';
+            break;
+            case 5:
+                return 'Demissional';
+            break;
+            case 6:
+                return 'Admissional';
+            break;
+        }
+    }
+
     public function gender(string $value)
     {
         switch ($value) {
