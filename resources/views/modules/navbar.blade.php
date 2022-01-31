@@ -13,19 +13,24 @@
                             <i class="mdi mdi-message-text-outline me-2"></i>Mensagens
                         </a>
                     </li>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascript:void(0);">
+                            |
+                        </a>
+                    </li>
+                    &nbsp;&nbsp;&nbsp;
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-chart-line-variant me-2"></i>Desempenho
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-tools me-2"></i>Ferramentas
                         </a>
                     </li>
