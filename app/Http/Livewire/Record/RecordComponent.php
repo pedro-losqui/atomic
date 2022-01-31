@@ -78,8 +78,10 @@ class RecordComponent extends Component
 
     public function completion(Soap $soap)
     {
-        $this->record->datExe = $this->validate()['date'];
-        $this->record->save();
+        if ($this->date) {
+            $this->record->datExe = $this->validate()['date'];
+            $this->record->save();
+        }
         $soap->RetornaCadastro($this->record);
         $this->updateStatus();
         $this->default();
