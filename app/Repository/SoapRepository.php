@@ -11,8 +11,6 @@ class SoapRepository extends Soap
     {
         $response = $this->covertResults($this->BuscaCadastroN($tipExame));
 
-        // dd($response);
-
         if ($response['totRegistros'] > 0) {
             for ($i=0; $i < $response['totRegistros']; $i++) {
                 if ($response['totRegistros'] > 1) {
@@ -24,13 +22,13 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador'][$i]['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        // $this->AlteraStatus($record);
+                        $this->AlteraStatus($record);
                     } else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador'][$i]['infoExame']['exames']['nomExame'],
                         ]);
-                        // $this->AlteraStatus($record);
+                        $this->AlteraStatus($record);
                     }
                 }else{
                     $record = Record::create($response['infoColaborador']);
@@ -41,19 +39,24 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador']['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        // $this->AlteraStatus($record);
+                        $this->AlteraStatus($record);
                     }else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador']['infoExame']['exames']['nomExame'],
                         ]);
-                        // $this->AlteraStatus($record);
+                        $this->AlteraStatus($record);
                     }
                 }
             }
         }else{
             return $response['msgRet'];
         }
+    }
+
+    public function getRecordsDebug($tipExame)
+    {
+        dd($this->covertResults($this->BuscaCadastroN($tipExame)));
     }
 
     public function covertResults($data)
