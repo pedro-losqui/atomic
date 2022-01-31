@@ -81,9 +81,9 @@ class RecordComponent extends Component
         if ($this->date) {
             $this->record->datExe = $this->validate()['date'];
             $this->record->save();
+            $this->updateStatus();
         }
         $soap->RetornaCadastro($this->record);
-        $this->updateStatus();
         $this->default();
     }
 
