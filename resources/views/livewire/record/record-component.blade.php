@@ -30,7 +30,7 @@
                             <div class="input-group">
                                 <div class="input-group-text"><i class="ri-survey-line"></i></div>
                                 <select wire:model='status' class="form-select">
-                                    <option value="0">Status...</option>
+                                    <option>Status...</option>
                                     <option value="1" selected>Solicitado</option>
                                     <option value="2">Agendado</option>
                                     <option value="3">Recebido</option>
@@ -42,12 +42,13 @@
                             <div class="input-group">
                                 <div class="input-group-text"><i class="ri-coupon-line"></i></div>
                                 <select wire:model='attendance' class="form-select">
-                                    <option value="0">Atendimento...</option>
+                                    <option>Atendimento...</option>
                                     <option value="1">Admissional</option>
                                     <option value="2">Periódico</option>
                                     <option value="3">Mudança de Riscos Ocupacionais</option>
                                     <option value="4">Retorno ao Trabalho</option>
                                     <option value="5">Demissional</option>
+                                    <option value="6">Trasnferência de Entrada/Admissional</option>
                                 </select>
                             </div>
                         </div>

@@ -23,7 +23,7 @@
                                     class="d-none d-md-inline-block">Movimentações</span>
                             </a>
                         </li>
-                        @if($record->retTipExa == 1 || $record->retTipExa == 3)
+                        @if($record->retTipExa == 1 || $record->retTipExa == 3 || $record->retTipExa == 6)
                             <li class="nav-item waves-effect waves-light">
                                 <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab"
                                     aria-selected="false">

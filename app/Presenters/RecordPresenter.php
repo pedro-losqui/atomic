@@ -66,6 +66,9 @@ class RecordPresenter
             case 5:
                 return 'Demissional';
             break;
+            case 6:
+                return 'Trasnferência de Entrada/Admissional';
+            break;
         }
     }
 
