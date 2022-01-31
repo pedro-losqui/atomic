@@ -38,6 +38,6 @@ class saveZero extends Command
      */
     public function handle(SoapRepository $soap)
     {
-        $soap->getRecords(0);
+        $soap->getZero();
     }
 }

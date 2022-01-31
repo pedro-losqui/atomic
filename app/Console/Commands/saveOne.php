@@ -39,6 +39,6 @@ class saveOne extends Command
      */
     public function handle(SoapRepository $soap)
     {
-        $soap->getRecords(1);
+        $soap->getOne();
     }
 }

@@ -1051,6 +1051,128 @@
     </tbody>
 </table>
 
+<table class="tabela">
+    <tbody><tr>
+     <td class="s1111" colspan="4">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="titclaro" colspan="4" align="center"><b>SINAIS VITAIS</b></td>
+             </tr>
+         </tbody></table>
+     </td>
+ </tr>
+ <tr>
+     <td class="s0111" width="25%">
+         <table class="tabela">
+              <tbody><tr>
+                  <td class="s0000" style="font-weight:bold">&nbsp;Temperatura</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+              <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Frequência Respiratória (IPM)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Pressão Arterial (mmHg)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Frequência de Pulso (BPM)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+ </tr>
+ <tr>
+     <td class="s0111" width="25%">
+         <table class="tabela">
+              <tbody><tr>
+                  <td class="s0000" style="font-weight:bold">&nbsp;Altura</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+              <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Biotipo</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Peso (Kg)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" width="25%">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Índice de Massa Corpórea</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;
+
+                 </td>
+             </tr>
+         </tbody></table>
+     </td>
+    </tr>
+ <tr>
+     <td class="s0111" colspan="2">
+           <table class="tabela">
+                <tbody><tr>
+                    <td class="s0000" style="font-weight:bold">&nbsp;Perímetro Cintura (cm)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+     <td class="s0110" colspan="2">
+         <table class="tabela">
+             <tbody><tr>
+                 <td class="s0000" style="font-weight:bold">&nbsp;Perímetro Quadril (cm)</td>
+             </tr>
+             <tr>
+                 <td class="s0000">&nbsp;</td>
+             </tr>
+         </tbody></table>
+     </td>
+    </tr>
+
+
+</tbody></table>
+
 <table style="width: 100%; border: 0px; border-spacing: 0;" align="center">
     <tbody>
         <tr class="s1111">
