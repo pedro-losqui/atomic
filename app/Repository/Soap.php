@@ -21,6 +21,8 @@ class Soap
 
     public function BuscaCadastroN($tipExame)
     {
+        sleep(60);
+
         return $this->soapWrapper->call('call.BuscaCadastroN', [
             'user' => 'cma.soc',
             'password' => 'UWBtX05rQUVaY2I=',
