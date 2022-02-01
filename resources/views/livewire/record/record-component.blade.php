@@ -74,11 +74,6 @@
     </div>
     <div class="row">
         <div class="col-lg-12">
-            @if (session()->has('message'))
-                <div class="alert alert-success">
-                    {{ session('message') }}
-                </div>
-            @endif
             <div class="card">
                 <div class="card-body">
                     <div class="table-responsive">

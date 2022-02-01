@@ -84,9 +84,7 @@ class RecordComponent extends Component
             $this->updateStatus();
         }
         $reponse = $soap->RetornaCadastro($this->record);
-        session()->flash('message', $reponse->nomColaborador . ': ' . $reponse->msgRet);
         $this->default();
-        return redirect()->to('/record');
     }
 
     public function find($id)
