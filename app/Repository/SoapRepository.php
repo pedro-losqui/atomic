@@ -5,11 +5,19 @@ namespace App\Repository;
 use App\Models\Exam;
 use App\Models\Record;
 
-class SoapRepository extends Soap
+class SoapRepository
 {
+    protected $soap;
+
+    public function __construct(Soap $soap)
+    {
+      $this->soap = $soap;
+    }
+
+
     public function getOne()
     {
-        $response = $this->covertResults($this->BuscaCadastroN(1));
+        $response = $this->covertResults($this->soap->BuscaCadastroNOne());
 
         if ($response['totRegistros'] > 0) {
             for ($i=0; $i < $response['totRegistros']; $i++) {
@@ -22,13 +30,13 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador'][$i]['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     } else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador'][$i]['infoExame']['exames']['nomExame'],
                         ]);
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }
                 }else{
                     $record = Record::create($response['infoColaborador']);
@@ -39,13 +47,13 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador']['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador']['infoExame']['exames']['nomExame'],
                         ]);
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }
                 }
             }
@@ -56,7 +64,7 @@ class SoapRepository extends Soap
 
     public function getZero()
     {
-        $response = $this->covertResults($this->BuscaCadastroN(0));
+        $response = $this->covertResults($this->soap->BuscaCadastroNZero());
 
         if ($response['totRegistros'] > 0) {
             for ($i=0; $i < $response['totRegistros']; $i++) {
@@ -69,13 +77,13 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador'][$i]['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     } else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador'][$i]['infoExame']['exames']['nomExame'],
                         ]);
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }
                 }else{
                     $record = Record::create($response['infoColaborador']);
@@ -86,24 +94,19 @@ class SoapRepository extends Soap
                                 'description' => $response['infoColaborador']['infoExame']['exames'][$k]['nomExame'],
                             ]);
                         }
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }else {
                         Exam::create([
                             'record_id' => $record->id,
                             'description' => $response['infoColaborador']['infoExame']['exames']['nomExame'],
                         ]);
-                        $this->AlteraStatus($record);
+                        $this->soap->AlteraStatus($record);
                     }
                 }
             }
         }else{
             return $response['msgRet'];
         }
-    }
-
-    public function getRecordsDebug($tipExame)
-    {
-        dd($this->covertResults($this->BuscaCadastroN($tipExame)));
     }
 
     public function covertResults($data)

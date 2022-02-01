@@ -9,11 +9,11 @@ class QueryController extends Controller
 {
     public function saveOne(SoapRepository $soap)
     {
-        $soap->getRecords(1);
+        $soap->getOne();
     }
 
     public function saveZero(SoapRepository $soap)
     {
-        $soap->getRecords(0);
+        $soap->getZero();
     }
 }

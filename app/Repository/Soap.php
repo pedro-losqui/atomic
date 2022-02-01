@@ -19,10 +19,8 @@ class Soap
         });
     }
 
-    public function BuscaCadastroN($tipExame)
+    public function BuscaCadastroNOne()
     {
-        sleep(60);
-
         return $this->soapWrapper->call('call.BuscaCadastroN', [
             'user' => 'cma.soc',
             'password' => 'UWBtX05rQUVaY2I=',
@@ -33,7 +31,24 @@ class Soap
                 'empSoc'            => 0,
                 'flowInstanceID'    => null,
                 'flowName'          => null,
-                'tipExame'          => $tipExame
+                'tipExame'          => 1
+            ]
+        ]);
+    }
+
+    public function BuscaCadastroNZero()
+    {
+        return $this->soapWrapper->call('call.BuscaCadastroN', [
+            'user' => 'cma.soc',
+            'password' => 'UWBtX05rQUVaY2I=',
+            'encryption' => 1,
+            'parameters'=> [
+                'dataFinal'         => date('d/m/Y', strtotime('+25 day')),
+                'dataInicio'        => date('d/m/Y', strtotime('-15 day')),
+                'empSoc'            => 0,
+                'flowInstanceID'    => null,
+                'flowName'          => null,
+                'tipExame'          => 0
             ]
         ]);
     }
