@@ -1,3 +1,7 @@
 window.addEventListener('alert', event => {
-    $('#'+event.detail.name).modal(event.detail.action);
+    var notyf = new Notyf({
+        duration: 7000,
+    });
+    console.log(event.detail)
+    notyf.success(event.detail.message);
 })

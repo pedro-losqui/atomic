@@ -84,6 +84,8 @@ class RecordComponent extends Component
             $this->updateStatus();
         }
         $reponse = $soap->RetornaCadastro($this->record);
+        $this->modal('recordUpdate', 'hide');
+        $this->dispatchBrowserEvent('alert', ['message' => $reponse->nomColaborador .': '. $reponse->msgRet]);
         $this->default();
     }
 

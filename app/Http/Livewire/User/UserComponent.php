@@ -89,6 +89,12 @@ class UserComponent extends Component
             'login'=> $this->login,
         ]);
 
+        if ($this->password) {
+            $this->user->update([
+                'password' => Hash::make($this->password),
+            ]);
+        }
+
         if ($this->acess) {
             $this->user->assignRole($this->acess);
         }

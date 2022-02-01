@@ -20,7 +20,7 @@
                     </li>
                     &nbsp;&nbsp;&nbsp;
                     <li class="nav-item">
-                        <a class="nav-link" href="jc">
+                        <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
                         </a>
                     </li>

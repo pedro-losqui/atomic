@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
     <title>Atomic | SS</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.css">
     <link rel="shortcut icon" href="assets/images/favicon.ico">
     <link href="{{ asset('assets/libs/jqvmap/jqvmap.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/css/bootstrap.min.css') }}" id="bootstrap-style" rel="stylesheet"
@@ -99,6 +99,7 @@
     <script src="{{ asset('assets/libs/jqvmap/maps/jquery.vmap.usa.js') }}"></script>
     <script src="{{ asset('assets/js/pages/dashboard.init.js') }}"></script>
     <script src="{{ asset('assets/js/app.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/notyf@3/notyf.min.js"></script>
     <livewire:scripts />
     <script src="{{ asset('assets/js/pages/modal.js') }}"></script>
     <script src="{{ asset('assets/js/pages/alert.js') }}"></script>
