@@ -93,6 +93,7 @@
                                         <td>
                                             <h5 class="font-size-15 mb-0">{{ $item->nomColaborador }}</h5>
                                             <p class="mb-1 font-size-12">{{ $item->cpfColaborador }}</p>
+                                            <p class="mb-1 font-size-12">{{ $item->nomLaboratorio }}</p>
                                         </td>
                                         <td>
                                             <p class="mb-1 font-size-12">Status</p>
