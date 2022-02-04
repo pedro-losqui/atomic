@@ -64,7 +64,7 @@ class RecordComponent extends Component
         $this->record->save();
         $this->emit('moviment', $this->record->id, Auth::user()->id, $this->record->status);
         $this->modal('recordUpdate', 'hide');
-        session()->flash('message.success', 'Status atualizado com sucesso.');
+        $this->dispatchBrowserEvent('alert', ['message' => 'Colaborador(a) ' . '<strong>' . $this->record->nomColaborador . '</strong>' . ' atualizado com sucesso.']);
     }
 
     public function updatePrint()

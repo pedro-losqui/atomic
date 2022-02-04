@@ -7,7 +7,7 @@ use Livewire\Component;
 
 class HeaderCountComponent extends Component
 {
-    public $solicitados, $agendados, $recebidos, $concluidos;
+    public $solicitados, $agendados, $recebidos, $concluidos, $admissional, $periodico, $demissional, $mudanca, $retorno, $transferencia;
 
     public function mount()
     {
@@ -15,6 +15,12 @@ class HeaderCountComponent extends Component
         $this->countAgendados();
         $this->countRecebidos();
         $this->countConcluidos();
+        $this->countAdmissional();
+        $this->countPeriodico();
+        $this->countMudanca();
+        $this->countRetorno();
+        $this->countDemissional();
+        $this->countTransferencia();
     }
 
     public function render()
@@ -40,5 +46,35 @@ class HeaderCountComponent extends Component
     public function countConcluidos()
     {
         $this->concluidos = count(Record::where('status', 4)->get());
+    }
+
+    public function countAdmissional()
+    {
+        $this->admissional = count(Record::where('status', 1)->where('retTipExa', '1')->get());
+    }
+
+    public function countPeriodico()
+    {
+        $this->periodico = count(Record::where('status', 1)->where('retTipExa', '2')->get());
+    }
+
+    public function countMudanca()
+    {
+        $this->mudanca = count(Record::where('status', 1)->where('retTipExa', '3')->get());
+    }
+
+    public function countRetorno()
+    {
+        $this->retorno = count(Record::where('status', 1)->where('retTipExa', '4')->get());
+    }
+
+    public function countDemissional()
+    {
+        $this->demissional = count(Record::where('status', 1)->where('retTipExa', '5')->get());
+    }
+
+    public function countTransferencia()
+    {
+        $this->transferencia = count(Record::where('status', 1)->where('retTipExa', '6')->get());
     }
 }

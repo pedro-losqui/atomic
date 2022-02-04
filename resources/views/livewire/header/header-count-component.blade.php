@@ -1,6 +1,32 @@
 <div>
     <div class="row">
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex text-muted">
+                        <div class="flex-grow-1 overflow-hidden">
+                            <small><strong>Admissional:</strong></small> <a href="#" style="margin-left: 0.3cm" class="badge bg-primary">{{ $admissional }}</a><br>
+                            <small><strong>Periódico:</strong></small> <a href="#" style="margin-left: 0.7cm" class="badge bg-primary">{{ $periodico }}</a><br>
+                            <small><strong>Mud. de R. O:</strong></small> <a href="#" style="margin-left: 0.2cm" class="badge bg-primary">{{ $mudanca }}</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-sm-6">
+            <div class="card">
+                <div class="card-body">
+                    <div class="d-flex text-muted">
+                        <div class="flex-grow-1 overflow-hidden">
+                            <small><strong>Ret. ao Trabalho:</strong></small> <a href="#" style="margin-left: 0.2cm" class="badge bg-primary">{{ $retorno }}</a><br>
+                            <small><strong>Demissional:</strong></small> <a href="#" style="margin-left: 0.8cm" class="badge bg-primary">{{ $demissional }}</a><br>
+                            <small><strong>Tr. de Ent/Adm:</strong></small> <a href="#" style="margin-left: 0.4cm" class="badge bg-primary">{{ $transferencia }}</a><br>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-xl-2 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex text-muted">
@@ -19,7 +45,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex text-muted">
@@ -38,7 +64,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex text-muted">
@@ -57,7 +83,7 @@
                 </div>
             </div>
         </div>
-        <div class="col-xl-3 col-sm-6">
+        <div class="col-xl-2 col-sm-6">
             <div class="card">
                 <div class="card-body">
                     <div class="d-flex text-muted">

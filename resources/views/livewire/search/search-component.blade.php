@@ -5,7 +5,7 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="input-group">
-                            <div class="input-group-text"><i class="ri-file-search-fill"></i></div>
+                            <div class="input-group-text"><i class="ri-search-line"></i></div>
                             <input type="search" wire:model='search' class="form-control"
                                 placeholder="Localizar atendimento">
                         </div>

@@ -8,7 +8,6 @@
     @endif
 
     <livewire:search.search-component />
-
     <livewire:header.header-count-component />
 
     @include('livewire.record.modal')
@@ -22,15 +21,15 @@
                     <form class="row row-cols-lg-auto g-3 align-items-center">
                         <div class="col-12">
                             <div class="input-group">
-                                <div class="input-group-text"><i class="mdi mdi-account-search-outline"></i></div>
-                                <input type="search" wire:model='search' class="form-control" placeholder="Busca">
+                                <div class="input-group-text"><i class="ri-user-3-line"></i></div>
+                                <input type="search" wire:model='clinic' class="form-control" placeholder="Localizar colaborador">
                             </div>
                         </div>
                         <div class="col-12">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="ri-survey-line"></i></div>
                                 <select wire:model='status' class="form-select">
-                                    <option>Status...</option>
+                                    <option>Status</option>
                                     <option value="1" selected>Solicitado</option>
                                     <option value="2">Agendado</option>
                                     <option value="3">Recebido</option>
@@ -40,9 +39,9 @@
                         </div>
                         <div class="col-12">
                             <div class="input-group">
-                                <div class="input-group-text"><i class="ri-coupon-line"></i></div>
+                                <div class="input-group-text"><i class="ri-file-list-3-line"></i></div>
                                 <select wire:model='attendance' class="form-select">
-                                    <option>Atendimento...</option>
+                                    <option>Exame</option>
                                     <option value="1">Admissional</option>
                                     <option value="2">Periódico</option>
                                     <option value="3">Mudança de Riscos Ocupacionais</option>
@@ -64,7 +63,7 @@
                         </div>
                         <div class="col-12">
                             <button type="button" wire:click='resetPage' class="btn btn-primary">
-                                <i class="mdi mdi-update"></i>
+                                <i class="mdi mdi-refresh"></i>
                             </button>
                         </div>
                     </form>
