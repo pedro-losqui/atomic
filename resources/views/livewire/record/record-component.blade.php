@@ -22,7 +22,7 @@
                         <div class="col-12">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="ri-user-3-line"></i></div>
-                                <input type="search" wire:model='clinic' class="form-control" placeholder="Localizar colaborador">
+                                <input type="search" wire:model='search' class="form-control" placeholder="Localizar colaborador">
                             </div>
                         </div>
                         <div class="col-12">
