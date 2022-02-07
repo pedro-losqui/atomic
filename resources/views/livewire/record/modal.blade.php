@@ -24,13 +24,15 @@
                             </a>
                         </li>
                         @if($record->retTipExa == 1 || $record->retTipExa == 3 || $record->retTipExa == 6)
-                            <li class="nav-item waves-effect waves-light">
-                                <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab"
-                                    aria-selected="false">
-                                    <i class="dripicons-clipboard me-1 align-middle"></i> <span
-                                        class="d-none d-md-inline-block">ASO</span>
-                                </a>
+                            @if ($record->visualization != '1')
+                                <li class="nav-item waves-effect waves-light">
+                                    <a class="nav-link" data-bs-toggle="tab" href="#messages-1" role="tab"
+                                        aria-selected="false">
+                                        <i class="dripicons-clipboard me-1 align-middle"></i> <span
+                                            class="d-none d-md-inline-block">ASO</span>
+                                    </a>
                             </li>
+                            @endif
                         @endif
                     </ul>
 

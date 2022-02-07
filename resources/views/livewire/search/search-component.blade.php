@@ -15,11 +15,18 @@
                     <div class="card-body">
                         <ol class="list-group list-group-numbered">
                             @forelse($results as $item)
-                                <li class="list-group-item d-flex justify-content-between align-items-start">
+                                <li style="{{ $item->visualization == '1' ? 'opacity: 0.6;' : '' }}"
+                                    class="list-group-item d-flex justify-content-between align-items-start">
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">{{ $item->nomColaborador }}</div>
-                                        <span class="badge bg-success">{{ $item->presenter()->tagStatus($item->status) }}</span>
-                                        {{ $item->presenter()->tagExam($item->retTipExa) }}
+                                        @if($item->visualization == '1')
+                                            <span
+                                                class="badge bg-danger">Registro inativado</span>
+                                        @else
+                                            <span
+                                                class="badge bg-success">{{ $item->presenter()->tagStatus($item->status) }}</span>
+                                            {{ $item->presenter()->tagExam($item->retTipExa) }}
+                                        @endif
                                     </div>
                                     <a href="javascript:void(0)" wire:click='view({{ $item->id }})'>
                                         <span class="badge badge-soft-primary">Vizualizar</span>
