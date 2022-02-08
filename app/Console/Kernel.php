@@ -21,7 +21,7 @@ class Kernel extends ConsoleKernel
     protected function schedule(Schedule $schedule)
     {
         $schedule->command('save:zero')->everyTwoMinutes();
-        $schedule->command('save:one')->everyTwoMinutes();
+        $schedule->command('save:one')->everyFourMinutes();
     }
 
     /**
