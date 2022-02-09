@@ -81,8 +81,8 @@
                                     <hr>
                                 </div>
                                 <hr>
-                                @if($record->estAtual && $record->estNova)
-                                    <div class="row row-cols-lg-auto g-5 align-items-center">
+                                <div class="row row-cols-lg-auto g-5 align-items-center">
+                                    @if ($record->estAtual)
                                         <div class="col-sm-4">
                                             <h6>Setor e Função Atual</h6>
                                             <ul class="mb-1 pl-3 pb-2">
@@ -96,7 +96,9 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                        <hr>
+                                    @endif
+                                    <hr>
+                                    @if ($record->estNova)
                                         <div class="col-sm-4">
                                             <h6>Setor e Função Proposto</h6>
                                             <ul class="mb-1 pl-3 pb-2">
@@ -110,9 +112,9 @@
                                                 </li>
                                             </ul>
                                         </div>
-                                    </div>
-                                    <hr>
-                                @endif
+                                    @endif
+                                </div>
+                                <hr>
                                 <div class="row row-cols-lg-auto g-5 align-items-center">
                                     <div class="col-sm-4">
                                         <h6>Clínica e Observações</h6>
