@@ -148,7 +148,7 @@
 
                         <tr>
                             <td>&nbsp;Unidade Alocado:</td>
-                            <td colspan="3">{{ $employee->nomFilial }}</td>
+                            <td colspan="3">{{ $employee->nomRateio }}</td>
                         </tr>
 
                         <tr>
