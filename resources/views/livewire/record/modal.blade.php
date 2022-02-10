@@ -96,8 +96,8 @@
                                                 </li>
                                             </ul>
                                         </div>
+                                        <hr>
                                     @endif
-                                    <hr>
                                     @if ($record->estNova)
                                         <div class="col-sm-4">
                                             <h6>Setor e Função Proposto</h6>
