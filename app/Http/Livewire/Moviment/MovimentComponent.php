@@ -81,8 +81,8 @@ class MovimentComponent extends Component
             'horSta' => $this->getHour(),
             'note' => $this->moviment->note,
         ]);
-        $soap->retornaStatusExa($this->findRecord($this->record_id), $status);
-        $this->dispatchBrowserEvent('alert', ['message' => $status->msgRet]);
+        $response = $soap->retornaStatusExa($this->findRecord($this->record_id), $status);
+        $this->dispatchBrowserEvent('alert', ['message' => $response->menMensagem]);
         $this->default();
     }
 
