@@ -82,6 +82,7 @@ class MovimentComponent extends Component
             'note' => $this->moviment->note,
         ]);
         $soap->retornaStatusExa($this->findRecord($this->record_id), $status);
+        $this->dispatchBrowserEvent('alert', ['message' => $status->msgRet]);
         $this->default();
     }
 
