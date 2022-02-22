@@ -2,18 +2,17 @@
 
 namespace App\Console\Commands;
 
-use App\Repository\SoapRepository;
 use Illuminate\Console\Command;
+use App\Repository\SoapRepository;
 
-class saveOne extends Command
+class saveSix extends Command
 {
     /**
      * The name and signature of the console command.
      *
      * @var string
      */
-    protected $signature = 'save:one';
-
+    protected $signature = 'save:six';
     /**
      * The console command description.
      *
@@ -38,6 +37,6 @@ class saveOne extends Command
      */
     public function handle(SoapRepository $soap)
     {
-        $soap->getOne();
+        $soap->getSix();
     }
 }

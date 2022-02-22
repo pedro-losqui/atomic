@@ -8,7 +8,7 @@
                             <i class="mdi mdi-clipboard-edit-outline me-2"></i>Dashboard
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li style="opacity : 0.5;" class="nav-item">
                         <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-message-text-outline me-2"></i>Mensagens
                         </a>
@@ -19,17 +19,17 @@
                         </a>
                     </li>
                     &nbsp;&nbsp;&nbsp;
-                    <li class="nav-item">
+                    <li style="opacity : 0.5;" class="nav-item">
                         <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li style="opacity : 0.5;" class="nav-item">
                         <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-chart-line-variant me-2"></i>Desempenho
                         </a>
                     </li>
-                    <li class="nav-item">
+                    <li style="opacity : 0.5;" class="nav-item">
                         <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-tools me-2"></i>Ferramentas
                         </a>

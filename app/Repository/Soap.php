@@ -53,6 +53,23 @@ class Soap
         ]);
     }
 
+    public function BuscaCadastroNSix()
+    {
+        return $this->soapWrapper->call('call.BuscaCadastroN', [
+            'user' => 'cma.soc',
+            'password' => 'UWBtX05rQUVaY2I=',
+            'encryption' => 1,
+            'parameters'=> [
+                'dataFinal'         => date('d/m/Y', strtotime('+25 day')),
+                'dataInicio'        => date('d/m/Y', strtotime('-15 day')),
+                'empSoc'            => 0,
+                'flowInstanceID'    => null,
+                'flowName'          => null,
+                'tipExame'          => 6
+            ]
+        ]);
+    }
+
     public function AlteraStatus($data)
     {
         return $this->soapWrapper->call('call.AlteraStatus', [

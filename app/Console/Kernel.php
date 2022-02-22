@@ -10,6 +10,7 @@ class Kernel extends ConsoleKernel
     protected $commands = [
         Commands\saveZero::class,
         Commands\saveOne::class,
+        Commands\saveSix::class,
     ];
 
     /**
@@ -20,8 +21,9 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->command('save:zero')->everyTwoMinutes();
-        $schedule->command('save:one')->everyFourMinutes();
+        $schedule->command('save:zero')->everyMinute();
+        $schedule->command('save:one')->everyTwoMinutes();
+        $schedule->command('save:six')->everyThreeMinutes();
     }
 
     /**

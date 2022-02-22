@@ -16,4 +16,9 @@ class QueryController extends Controller
     {
         $soap->getZero();
     }
+
+    public function saveSix(SoapRepository $soap)
+    {
+        $soap->getSix();
+    }
 }

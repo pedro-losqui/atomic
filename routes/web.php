@@ -22,3 +22,4 @@ Route::get('/print/{id}',   [KitController::class, 'index'])->name('print');
 
 Route::get('/save-one',     [QueryController::class, 'saveOne'])->name('save-one');
 Route::get('/save-zero',    [QueryController::class, 'saveZero'])->name('save-zero');
+Route::get('/save-six',     [QueryController::class, 'saveSix'])->name('save-six');
