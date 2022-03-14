@@ -95,6 +95,7 @@ class RecordComponent extends Component
         $this->modal('recordModal', 'show');
         $this->getMoviments();
         $this->getExams();
+        $this->getAppear();
         $this->getWork();
         $this->getStatus();
     }
@@ -125,6 +126,11 @@ class RecordComponent extends Component
     public function getExams()
     {
         $this->emit('getExams', $this->record->id);
+    }
+
+    public function getAppear()
+    {
+        $this->emit('getAppear', $this->record->id);
     }
 
     public function getWork()

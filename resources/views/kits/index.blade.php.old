@@ -98,307 +98,373 @@
 {{-- ASO --}}
 
 @for ($i = 0; $i < 3 ; $i++)
-<table style="margin:0px;padding:0px;border:0px;width:100%;height:100%">
+<table class="tableHeader" width="100%" border="0" align="center"
+    style="position: relative; border: 1px solid #000; margin-top: 15px;">
     <tbody>
-     <tr>
-      <td class="ui-sortable" id="sortable" style="vertical-align:top">
-       <table id="T1" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;text-align:center;font-family:'verdana';border-collapse:collapse" data-grupo="CABECALHO">
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable" style="width:15%;text-align:center;vertical-align:top"><img title="Logo da Empresa Principal" src="https://sistema.soc.com.br/estatico/upload/empresas/143453/logos/relatorio/143453r1logorel.png" style="width:120px; height:100px;"></td>
-          <td class="ui-droppable" style="width:70%"><span style="color:rgb( 49 , 131 , 131 );font-family:'verdana';font-size:12pt;font-variant:small-caps;font-weight:bold;text-decoration:underline">A S O - Atestado de Saúde Ocupacional</span></td>
-          <td class="ui-droppable" style="width:15%;text-align:right"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"><span style="font-family:'verdana';font-size:10pt;font-variant:small-caps;font-weight:bold">{{ $employee->nomEmpresa }}</span></td>
-          <td class="ui-droppable" style="text-align:center"><span style="font-weight:bold">{{ date('d/m/Y') }}</span></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T2" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:black;border-bottom-width:1px;border-bottom-style:solid" colspan="4"><span>Empresa</span></td>
-         </tr>
-        </thead>
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable" style="width:17%"><span>Razão Social:</span></td>
-          <td class="ui-droppable" style="width:33%"><span style="font-weight:bold">{{ $employee->nomEmpresa }}</span></td>
-          <td class="ui-droppable" style="width:17%"></td>
-          <td class="ui-droppable" style="width:33%"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>CNPJ:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->cnpjFilial }}</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Unidade:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomRateio }}</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-            <td class="ui-droppable"><span>CNPJ Unidade:</span></td>
-            <td class="ui-droppable"><span>{{ $employee->cnpjPosto }}</span></td>
-            <td class="ui-droppable"></td>
-            <td class="ui-droppable"></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T3" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid" colspan="4"><span>Funcionário</span></td>
-         </tr>
-        </thead>
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable" style="width:17%"><span>Nome:</span></td>
-          <td class="ui-droppable" style="width:33%"><span style="font-weight:bold">{{ $employee->nomColaborador }}</span></td>
-          <td class="ui-droppable" style="width:17%"></td>
-          <td class="ui-droppable" style="width:33%"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>RG:</span></td>
-          <td class="ui-droppable"><span>----</span></td>
-          <td class="ui-droppable"><span>Órgão Emissor:</span></td>
-          <td class="ui-droppable"><span>----</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>CPF:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->cpfColaborador }}</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Nascimento:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nasColaborador }}</span><span></span><span></span></td>
-          <td class="ui-droppable"><span>Sexo:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->presenter()->gender($employee->sexColaborador) }}</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Cargo:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomCargo }}</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Setor:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomPosto }}</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T4" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid" colspan="4"><span>Médico responsável pelo PCMSO</span></td>
-         </tr>
-        </thead>
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable" style="width:17%"><span>Nome:</span></td>
-          <td class="ui-droppable" style="width:33%"><span>CLAUDIO ERNANI MARCONDES DE MIRANDA</span></td>
-          <td class="ui-droppable" style="width:17%"></td>
-          <td class="ui-droppable" style="width:33%"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>CRM:</span></td>
-          <td class="ui-droppable"><span>37287</span><span></span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Endereço:</span></td>
-          <td class="ui-droppable"><span>Avenida Francisco Pereira de Castro, 358</span></td>
-          <td class="ui-droppable"><span>Cidade/UF</span></td>
-          <td class="ui-droppable"><span>Jundiaí</span><span> / </span><span>SP</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Bairro:</span></td>
-          <td class="ui-droppable"><span>Anhangabaú</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Telefone:</span></td>
-          <td class="ui-droppable"><span>(11) 4806-8400</span></td>
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T5" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="RISCOS" data-qtde_minima_linhas="1" data-qtde_registros_por_linha="1" data-agrupa_riscos="sim">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid"><span>Perigos / Fatores de Risco</span></td>
-         </tr>
-        </thead>
-        <tbody data-corpo="RISCOS">
-         <tr>
-          <td style="width:100%">
-           <table style="margin:0px;padding:0px;border:0px;width:100%;border-collapse:collapse">
-            <tbody>
-                @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: #009966;"><b>Físicos:</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['physicist'] }}
-                    </td>
-                </tr>
-            @endif
-            @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: red;"><b>Químicos:</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['chemical'] }}
-                    </td>
-                </tr>
-            @endif
-            @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: rgb(107, 74, 74);"><b>Biológicos:</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['biological'] }}
-                    </td>
-                </tr>
-            @endif
-            @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: rgb(161, 161, 39);"><b>Ergonômicos:</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['ergonomic'] }}
-                    </td>
-                </tr>
-            @endif
-            @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: #0000FF;"><b>Acidentais :</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['accident'] }}
-                    </td>
-                </tr>
-            @endif
-            @if ($employee->risk)
-                <tr>
-                    <td width="10%" valign="top" style="color: #e49329;"><b>Outros :</b></td>
-                    <td width="90%" valign="top" class="m0000">
-                        {{ $employee->risk['other'] }}
-                    </td>
-                </tr>
-            @endif
-            </tbody>
-           </table></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T6" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid"><span>EM CUMPRIMENTO ÀS PORTARIAS NºS 3214/78, 3164/82, 12/83, 24/94 E 08/96 NR7 DO MINISTÉRIO DO TRABALHO E EMPREGO PARA FINS DE EXAME:</span></td>
-         </tr>
-        </thead>
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>{{ $employee->presenter()->tagExamAso($employee->retTipExa) }}</span></td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T25" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="EXAMES" data-qtde_minima_linhas="1" data-qtde_registros_por_linha="1">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid"><span>Avaliação Clínica e Exames Realizados</span></td>
-         </tr>
-        </thead>
-        <tbody data-corpo="EXAMES">
-         <tr>
-          <td style="width:100%">
-           <table style="margin:0px;padding:0px;border:0px;width:100%;border-collapse:collapse">
-            <tbody>
-                @foreach ($employee->exams as $item)
-                    <tr style="height:15px">
-                        <td class="ui-droppable" style="width:15%"><span>____/____/______</span></td>
-                        <td class="ui-droppable" style="width:85%"><span>{{ $item->description }}</span></td>
-                    </tr>
-                @endforeach
-            </tbody>
-           </table>
-        </td>
-         </tr>
-        </tbody>
-       </table>
-       <table id="T18" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <thead>
-         <tr style="height:15px">
-          <td style="background:rgb( 238 , 238 , 238 );font-weight:bold;border-bottom-color:rgb( 0 , 0 , 0 );border-bottom-width:1px;border-bottom-style:solid"><span>Parecer</span></td>
-         </tr>
-        </thead>
-        <tbody>
-         <tr style="height:15px">
-            <td class="ui-droppable"><span>&nbsp;[ &nbsp; ] Apto para função &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ &nbsp; ] Inapto para função </span></td>
-            @foreach ($employee->appears as $item)
-            <tr style="height:15px">
-                <td class="ui-droppable"><span>&nbsp;[ &nbsp; ] Apto para {{ $item->description }} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; [ &nbsp; ] Inapto para {{ $item->description }} </span></td>
-            </tr>
-            @endforeach
-            </tr>
-        </tbody>
-       </table>
-       <table id="T20" style="margin:0px 0px 5px;padding:0px;border:0px;width:100%;text-align:center;font-family:'verdana';border-collapse:collapse" data-grupo="GENERICO">
-        <tbody>
-         <tr style="height:15px">
-          <td class="ui-droppable" style="width:50%"></td>
-          <td class="ui-droppable" style="width:50%"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>__________________________</span></td>
-          <td class="ui-droppable"><span>__________________________</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>Carimbo e Assinatura</span></td>
-          <td class="ui-droppable"><span>DECLARO TER RECEBIDO CÓPIA DESTE ATESTADO</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"><span>&nbsp;</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomColaborador }}</span></td>
-         </tr>
-         <tr style="height:15px">
-          <td class="ui-droppable"></td>
-          <td class="ui-droppable"></td>
-         </tr>
-        </tbody>
-       </table></td>
-     </tr>
+        <tr>
+            <td width="120px">
+                <table cellspacing="0" cellpadding="0">
+                    <tbody>
+                        <tr>
+                            <td><img src="https://sistema.soc.com.br/estatico/upload/empresas/143453/logos/relatorio/143453r1logorel.png"
+                                    width="120" height="120"></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+            <td class="cb_e2" style="font-size:16px;" align="center">ASO - Atestado de Saúde Ocupacional<br>
+                <font size="3"></font>
+            </td>
+            <td width="20%">&nbsp; </td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td id="#tituloCabecalho" align="center" class="cb_e1" style="font-size:12px;">{{ $employee->nomEmpresa }}
+            <td width="20%" align="right" class="cb_e1">{{ date('d/m/Y') }}</td>
+        </tr>
     </tbody>
-   </table>
+</table>
+
+<table width="98%" border="0" cellspacing="0" cellpadding="0" align="center" style="margin-top: 15px;">
+    <tbody>
+        <tr>
+            <td>
+                <table id="tb-cabecalho" style="margin-top: 15px;" class="tb-padrao">
+                    <tbody>
+                        <tr>
+                            <td class="nome-tabela" colspan="4"><b>&nbsp;Empresa</b></td>
+                        </tr>
+
+                        <tr>
+                            <td width="20%">&nbsp;Razão Social:</td>
+                            <td width="30%" colspan="3">{{ $employee->nomEmpresa }}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;CNPJ:</td>
+                            <td colspan="3">{{ $employee->cnpjFilial }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;Unidade Alocado:</td>
+                            <td colspan="3">{{ $employee->nomRateio }}</td>
+                        </tr>
+
+                        <tr>
+                            <td>&nbsp;CNPJ Unidade Alocado:</td>
+                            <td colspan="3">{{ $employee->cnpjPosto }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table id="tb-funcionario" style="margin-top: 15px;" class="tb-padrao">
+                    <colgroup>
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                        <col width="10%">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td class="nome-tabela" colspan="12">
+                                <strong>&nbsp;Funcionário</strong>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2" class="width-20">
+                                &nbsp;Nome:
+                            </td>
+                            <td colspan="7">
+                                &nbsp;<b>{{ $employee->nomColaborador }}</b>
+
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">
+                                &nbsp;RG
+                                / CPF :
+                            </td>
+                            <td width="35%">
+                                &nbsp;{{ $employee->cpfColaborador }}
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">&nbsp;Nascimento/Idade: </td>
+                            <td width="35%">&nbsp;{{ $employee->nasColaborador }}</td>
+                            <td width="15%">&nbsp;Sexo: </td>
+                            <td width="35%">&nbsp;{{ $employee->presenter()->gender($employee->sexColaborador) }}</td>
+                        </tr>
+
+                        <tr>
+                            <td colspan="2">&nbsp;Cargo: </td>
+                            <td width="35%">&nbsp;{{ $employee->nomCargo }}</td>
+
+
+                        </tr>
+                        <tr>
+                            <td colspan="2">&nbsp;Setor: </td>
+                            <td colspan="7">&nbsp;{{ $employee->nomPosto }}</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 15px;">
+                    <tbody><tr>
+                       <td colspan="4" class="m1111" bgcolor="#eeeeee">&nbsp;<b>Médico Responsável pelo PCMSO</b></td>
+                     </tr>
+
+                          <tr>
+                             <td width="20%" class="m0001">&nbsp;Nome:</td>
+                             <td width="80%" class="m0100" colspan="3">&nbsp;Claudio Ernani Marcondes de Miranda</td>
+                          </tr>
+                          <tr>
+                             <td class="m0001">&nbsp;CRM:</td>
+                             <td class="m0100" colspan="3">&nbsp;37287&nbsp;</td>
+                          </tr>
+                          <tr>
+                              <td class="m0001">&nbsp;Endereço:</td>
+                              <td class="m0000" width="35%">&nbsp;Avenida Francisco Pereira de Castro, 358</td>
+                              <td class="m0000" width="15%">&nbsp;Cidade/ UF:</td>
+                              <td class="m0100" width="35%">&nbsp;Jundiaí / SP </td>
+                          </tr>
+                           <tr>
+                              <td class="m0001">&nbsp;Bairro:</td>
+                              <td class="m0100" colspan="3">&nbsp;Anhangabaú</td>
+                          </tr>
+                          <tr>
+                              <td class="m0011">&nbsp;Telefone:</td>
+                              <td class="m0110" colspan="3">
+                                (11) 4806-8400
+                              </td>
+                          </tr>
+              </tbody>
+            </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 15px;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="m1111" bgcolor="#eeeeee">&nbsp;<b>Perigos/Fatores de Risco</b></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" class="m0111" valign="top">
+                                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: #009966;"><b>Físicos:</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['physicist'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: red;"><b>Químicos:</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['chemical'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: rgb(107, 74, 74);"><b>Biológicos:</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['biological'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: rgb(161, 161, 39);"><b>Ergonômicos:</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['ergonomic'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: #0000FF;"><b>Acidentais :</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['accident'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                        @if ($employee->risk)
+                                            <tr>
+                                                <td width="10%" valign="top" style="color: #e49329;"><b>Outros :</b></td>
+                                                <td width="90%" valign="top" class="m0000">
+                                                    {{ $employee->risk['other'] }}
+                                                </td>
+                                            </tr>
+                                        @endif
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 15px;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="m1111" bgcolor="#eeeeee">&nbsp;<b>EM CUMPRIMENTO ÀS PORTARIAS NºS
+                                    3214/78, 3164/82, 12/83, 24/94 E 08/96 NR7 DO MINISTÉRIO DO TRABALHO E EMPREGO PARA
+                                    FINS DE EXAME:</b></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" class="m0111">
+                                &nbsp;{{ $employee->presenter()->tagExamAso($employee->retTipExa) }}
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 15px;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="m1111" bgcolor="#eeeeee">&nbsp;<b>Avaliação Clínica e Exames
+                                    Realizados</b></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" class="m0111">
+                                <table border="0" width="100%" cellspacing="0" cellpadding="0">
+                                    <tbody>
+                                        <tr>
+
+                                            <td width="*" valign="top" align="center">
+                                                <table border="0" width="100%">
+                                                    @foreach ($employee->exams as $item)
+                                                        <tbody>
+                                                            <tr>
+                                                                <td style="white-space: nowrap" width="20%" valign="top"
+                                                                    class="m0000" align="left">____/____/______</td>
+                                                                <td width="80%" valign="top" class="m0000" align="left">
+                                                                    {{ $item->description }}</td>
+                                                            </tr>
+                                                        </tbody>
+                                                    @endforeach
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="0" cellpadding="0" style="margin-top: 15px;">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="m1111" bgcolor="#eeeeee">&nbsp;<b>Parecer</b></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" class="m0111">
+                                &nbsp;[ &nbsp; ] Apto para função &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[ &nbsp; ] Inapto
+                                para função
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table border="0" width="100%" cellspacing="1" cellpadding="1" style="margin-top: 15px;"
+                    class="conteudo-editor-texto">
+                    <tbody>
+                        <tr>
+                            <td width="100%" class="m1111" bgcolor="#eeeeee">&nbsp;<b>Observações</b></td>
+                        </tr>
+                        <tr>
+                            <td width="100%" class="m0111 conteudo-editor-texto" style="height: 50px;">
+                                &nbsp;</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <table width="100%" border="0" style="margin-top: 15px;">
+                    <tbody>
+                        <tr>
+                            <td width="50%" height="12" align="center">
+
+                            </td>
+                            <td width="50%" height="12" align="center">
+                                <div align="center">
+                                    <br><br>
+                                    _____/_____/__________
+                                    <br><br><br>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50%" height="18" valign="middle" align="center">
+                                <br>
+                                <p>____________________________________</p>
+                                <p>
+                                    Carimbo e Assinatura<br>Médico Examinador com CRM
+                                </p>
+                            </td>
+                            <td width="50%" height="18" valign="middle" align="center">
+                                <div class="assinaturaFuncionario">
+                                </div>
+                                <font color="#000000">____________________________________</font><br>
+
+                                {{ $employee->nomColaborador }}
+                                <br>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td width="50%" height="18" valign="middle" align="center">&nbsp;
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<p class="pagina">&nbsp;</p>
 @endfor
 
 {{-- Pedido de exame --}}

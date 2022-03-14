@@ -157,6 +157,8 @@
                             <hr>
                             <livewire:exam.exam-component />
                             <hr>
+                            <livewire:appear.appear-component />
+                            <hr>
                             <div>
                                 <div>
                                     @if($record->print == 0)

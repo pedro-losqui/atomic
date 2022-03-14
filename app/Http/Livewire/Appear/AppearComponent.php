@@ -1,16 +1,15 @@
 <?php
 
-namespace App\Http\Livewire\Exam;
+namespace App\Http\Livewire\Appear;
 
-use App\Models\Exam;
+use App\Models\Appear;
 use Livewire\Component;
 
-class ExamComponent extends Component
+class AppearComponent extends Component
 {
-
     public $description, $record_id;
 
-    protected $listeners = ['getExams'];
+    protected $listeners = ['getAppear'];
 
     protected $rules = [
         'description' => 'required|string|min:4',
@@ -18,12 +17,13 @@ class ExamComponent extends Component
 
     public function render()
     {
-        return view('livewire.exam.exam-component', [
-            'exams' => Exam::where('record_id', $this->record_id)->get()
+        return view('livewire.appear.appear-component', [
+            'appears' => Appear::where('record_id', $this->record_id)->get()
         ]);
     }
 
-    public function getExams($id)
+
+    public function getAppear($id)
     {
         $this->record_id = $id;
     }
@@ -34,7 +34,7 @@ class ExamComponent extends Component
 
         $this->firstUppercase();
 
-        Exam::create([
+        Appear::create([
             'record_id' => $this->record_id,
             'description' => $this->description,
         ]);
@@ -44,8 +44,8 @@ class ExamComponent extends Component
 
     public function delete($id)
     {
-        $exam = Exam::find($id);
-        $exam->delete();
+        $appear = Appear::find($id);
+        $appear->delete();
     }
 
     public function firstUppercase()

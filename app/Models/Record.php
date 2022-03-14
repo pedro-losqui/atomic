@@ -57,6 +57,11 @@ class Record extends Model
         return $this->hasMany(Exam::class, 'record_id');
     }
 
+    public function appears()
+    {
+        return $this->hasMany(Appear::class, 'record_id');
+    }
+
     public function risk()
     {
         return $this->hasOne(Risk::class, 'record_id');
