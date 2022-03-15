@@ -57,6 +57,13 @@
                         </div>
 
                         @if($record->status == 3)
+                            <div class="col-lg-12">
+                                <div class="mb-3">
+                                    <div class="alert alert-danger alert-dismissible fade show mb-0" role="alert">
+                                        <strong>Atenção!</strong> Por favor, verificar se o colaborador <strong>{{ $record->nomColaborador }}</strong> realizou o exame toxicológico.
+                                    </div>
+                                </div>
+                            </div>
                             <div class="col-lg-4">
                                 <div class="mb-3">
                                     <label class="form-label" for="default-input">Data do ASO</label>
