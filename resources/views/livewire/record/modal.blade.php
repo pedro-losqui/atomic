@@ -49,7 +49,7 @@
                                         <address>
                                             <strong>Razão Social:</strong> {{ $record->nomEmpresa }}<br>
                                             <strong>CNPJ:</strong> {{ $record->cnpjFilial }}<br>
-                                            <strong>Nome do Posto:</strong> {{ $record->nomRateio }}<br>
+                                            <strong>Nome do Posto:</strong> {{ $record->nomFilial }}<br>
                                             <strong>CNPJ:</strong> {{ $record->cnpjPosto }}<br>
                                         </address>
                                     </div>
