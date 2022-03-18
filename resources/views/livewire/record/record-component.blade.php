@@ -106,7 +106,7 @@
                                             <p class="mb-1 font-size-12">Data Solicitação</p>
                                             {{ $item->created_at->format('d/m/Y') }}
                                             @if ($item->presenter()->alert($item->created_at->diffInDays(), $item->status, $item->print) > 2)
-                                            <br><span class="badge bg-danger">Kit atrasado {{ $item->created_at->diffForHumans() }}</span>
+                                            <br><span class="badge bg-danger">Kit atrasado {{ $item->created_at->subDays(-2)->diffForHumans() }}</span>
                                             @endif
                                         </td>
                                         <td>
