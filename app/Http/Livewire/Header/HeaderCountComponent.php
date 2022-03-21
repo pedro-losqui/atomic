@@ -30,7 +30,7 @@ class HeaderCountComponent extends Component
 
     public function countSolicitados()
     {
-        $this->solicitados = count(Record::where('status', 1)->get());
+        $this->solicitados = count(Record::where('status', 1)->where('visualization', '0')->get());
     }
 
     public function countAgendados()
