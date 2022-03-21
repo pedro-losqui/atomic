@@ -35,17 +35,17 @@ class HeaderCountComponent extends Component
 
     public function countAgendados()
     {
-        $this->agendados = count(Record::where('status', 2)->get());
+        $this->agendados = count(Record::where('status', 2)->where('visualization', '0')->get());
     }
 
     public function countRecebidos()
     {
-        $this->recebidos = count(Record::where('status', 3)->get());
+        $this->recebidos = count(Record::where('status', 3)->where('visualization', '0')->get());
     }
 
     public function countConcluidos()
     {
-        $this->concluidos = count(Record::where('status', 4)->get());
+        $this->concluidos = count(Record::where('status', 4)->where('visualization', '0')->get());
     }
 
     public function countAdmissional()
