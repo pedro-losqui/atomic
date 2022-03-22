@@ -548,7 +548,7 @@
                                 <td class="m0000" style="font-weight: bold">CNPJ</td>
                             </tr>
                             <tr>
-                                <td class="m0000">00.886.257/0007-88</td>
+                                <td class="m0000">{{ $employee->cnpjFilial }}</td>
                             </tr>
                         </tbody>
                     </table>
