@@ -137,7 +137,7 @@
          </tr>
          <tr style="height:15px">
           <td class="ui-droppable"><span>Unidade:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomFilial }}</span></td>
+          <td class="ui-droppable"><span>{{ $employee->nomPosto }}</span></td>
           <td class="ui-droppable"></td>
           <td class="ui-droppable"></td>
          </tr>
