@@ -5,10 +5,10 @@
                 <ul class="navbar-nav">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('record') }}">
-                            <i class="mdi mdi-clipboard-edit-outline me-2"></i>Dashboard
+                            <i class="mdi mdi-clipboard-multiple-outline me-2"></i>Solicitações
                         </a>
                     </li>
-                    <li style="opacity : 0.5;" class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link" href="javascript:void(0);">
                             <i class="mdi mdi-message-text-outline me-2"></i>Mensagens
                         </a>
@@ -18,25 +18,23 @@
                             |
                         </a>
                     </li>
-                    &nbsp;&nbsp;&nbsp;
-                    <li style="opacity : 0.5;" class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);">
-                            <i class="mdi mdi-flask-empty-outline me-2"></i>Exames
+                    &nbsp;&nbsp;
+                    <li style="" class="nav-item">
+                        <a class="nav-link" href="{{ route('company') }}">
+                            <i class="mdi mdi-office-building-outline me-2"></i>Empresas
                         </a>
                     </li>
-                    <li style="opacity : 0.5;" class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);">
-                            <i class="mdi mdi-chart-line-variant me-2"></i>Desempenho
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="javascript:void(0);" id="topnav-apps" role="button">
+                            <i class="mdi mdi-chart-bar me-2"></i>Relatório <div class="arrow-down"></div>
                         </a>
-                    </li>
-                    <li style="opacity : 0.5;" class="nav-item">
-                        <a class="nav-link" href="javascript:void(0);">
-                            <i class="mdi mdi-tools me-2"></i>Ferramentas
-                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                            <a href="{{ route('reportEsocial') }}" class="dropdown-item">Inconsistência eSocial</a>
+                        </div>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('user') }}">
-                            <i class="mdi mdi-account-plus-outline me-2"></i>Usuários
+                            <i class="mdi mdi-account-details me-2"></i>Usuários
                         </a>
                     </li>
                 </ul>

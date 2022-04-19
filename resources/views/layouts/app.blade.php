@@ -22,7 +22,7 @@
             <div class="navbar-header">
                 <div class="d-flex">
                     <div class="navbar-brand-box text-center">
-                        <a href="javascript:void(0)" class="logo logo-dark">
+                        <a href="{{ route('record') }}" class="logo logo-dark">
                             <span class="logo-lg">
                                 <img src="{{ asset('assets/images/logo-dark.png') }}" height="24">
                             </span>

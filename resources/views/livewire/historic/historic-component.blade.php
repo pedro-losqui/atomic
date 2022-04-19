@@ -1,22 +1,13 @@
 <div>
-    <div class="col-md-6 mb-1" wire:loading wire:target="save">
-        <div class="button-list mb-1 mb-sm-0">
-            <button class="btn btn-primary" type="button" disabled="">
-                <span class="spinner-border spinner-border-sm me-1" role="status" aria-hidden="true"></span>
-                Enviando movimentação...
-            </button>
-        </div>
-    </div>
-
     <div class="card-body" wire:target='save' wire:loading.remove>
-        <h4 class="card-title mb-2">Movimentações</h4>
-        @forelse($moviments as $item)
+        <h4 class="card-title mb-2">Histórico</h4>
+        @forelse($historic as $item)
             <ul class="verti-timeline list-unstyled">
                 <li class="event-list">
                     <div>
                         <p class="text-primary">
                             {{ $item->created_at->format('d/m/Y H:i') }}</p>
-                        <h6>Movimentado por: {{ $item->user['name'] }}</h6>
+                        <h6>Registrado por: {{ $item->user['name'] }}</h6>
                         <p class="text-muted">{{ $item->note }}</p>
                     </div>
                 </li>
@@ -33,9 +24,9 @@
                 <form class="needs-validation">
                     <div class="row">
                         <div class="col mb-2 mb-sm-0">
-                            <input type="text" wire:model='moviment.note' class="form-control border-0"
+                            <input type="text" wire:model='note' class="form-control border-0"
                                 placeholder="Digite seu texto">
-                            @error('moviment.note')
+                            @error('note')
                                 <span class="badge badge-soft-danger mt-2">{{ $message }}</span>
                             @enderror
                         </div>

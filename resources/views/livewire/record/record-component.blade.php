@@ -47,7 +47,7 @@
                                     <option value="3">Mudança de Riscos Ocupacionais</option>
                                     <option value="4">Retorno ao Trabalho</option>
                                     <option value="5">Demissional</option>
-                                    <option value="6">Trasnferência de Entrada/Admissional</option>
+                                    <option value="6">Transferência de Entrada/Admissional</option>
                                 </select>
                             </div>
                         </div>
@@ -83,7 +83,7 @@
                                     <th scope="col">Status</th>
                                     <th scope="col">Atendimento</th>
                                     <th scope="col">Data</th>
-                                    <th scope="col">Ação<output></output></th>
+                                    <th scope="col">Ações<output></output></th>
                                 </tr>
                             </thead>
                             <tbody>
