@@ -10,7 +10,7 @@ use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class CompanyComponent extends Component
 {
-    use WithPagination;
+    use WithPagination, AuthorizesRequests;
 
     public $company, $code, $company_name, $import, $pendency, $esocial, $elis;
 
@@ -39,6 +39,8 @@ class CompanyComponent extends Component
 
     public function render()
     {
+        $this->authorize('company.home', Auth::user()->can('company.home'));
+
         return view('livewire.company.company-component', [
             'companies' => Company::where('company_name', 'LIKE', "%{$this->search}%")
             ->orderBy('id', 'ASC')
@@ -48,6 +50,8 @@ class CompanyComponent extends Component
 
     public function save()
     {
+        $this->authorize('company.create', Auth::user()->can('company.create'));
+
         $this->uppercase();
 
         Company::create($this->validate());
@@ -57,6 +61,8 @@ class CompanyComponent extends Component
 
     public function edit($id)
     {
+        $this->authorize('company.edit', Auth::user()->can('company.edit'));
+
         $this->company = Company::findOrFail($id);
         $this->code = $this->company->code;
         $this->company_name = $this->company->company_name;

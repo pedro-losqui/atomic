@@ -5,11 +5,15 @@ namespace App\Http\Livewire\Report;
 use App\Models\Company;
 use Livewire\Component;
 use App\Exports\InvoicesExport;
+use Illuminate\Support\Facades\Auth;
 use Maatwebsite\Excel\Facades\Excel;
 use App\Repository\Guzzle\GuzzleQuery;
+use Illuminate\Foundation\Auth\Access\AuthorizesRequests;
 
 class ReportEsocialComponent extends Component
 {
+    use AuthorizesRequests;
+
     public $from, $to, $group;
 
     protected $rules = [
@@ -28,6 +32,8 @@ class ReportEsocialComponent extends Component
 
     public function render()
     {
+        $this->authorize('reportEsocial.home', Auth::user()->can('reportEsocial.home'));
+
         return view('livewire.report.report-esocial-component');
     }
 
