@@ -28,8 +28,15 @@ class LoginController extends Controller
     public function auth(LoginRequest $request)
     {
         if (Auth::attempt($request->validated())) {
-            $request->session()->regenerate();
-            return redirect()->intended('/record');
+
+            if (Auth::user()->hasRole('Relatório.eSocial')) {
+                $request->session()->regenerate();
+                return redirect()->intended('/reportEsocial');
+            }else{
+                $request->session()->regenerate();
+                return redirect()->intended('/record');
+            }
+
         }else{
             return back()->withErrors([
                 'alert' => trans('auth.failed'),
