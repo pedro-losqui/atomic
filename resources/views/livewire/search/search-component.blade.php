@@ -5,13 +5,25 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="input-group">
-                            <div class="input-group-text"><i class="ri-search-line"></i></div>
-                            <input type="search" wire:model='search' class="form-control"
+                            <input type="text" wire:model='search' wire:keydown.enter="searchRecord" class="form-control"
                                 placeholder="Localizar atendimento">
+                            @if($results)
+                                <button class="btn btn-primary" wire:click='clear' type="button"><i
+                                        class="mdi mdi-close"></i></button>
+                            @else
+                                <button class="btn btn-primary" wire:loading.remove wire:target="searchRecord" wire:click='searchRecord'
+                                    type="button">Pesquisar
+                                </button>
+                                <button class="btn btn-primary" wire:loading wire:target="searchRecord" type="button">
+                                    <div class="spinner-grow spinner-grow-sm" role="status">
+                                        <span class="visually-hidden"></span>
+                                      </div>
+                                </button>
+                            @endif
                         </div>
                     </div>
                 </div>
-                @if($search)
+                @if($results)
                     <div class="card-body">
                         <ol class="list-group list-group-numbered">
                             @forelse($results as $item)
@@ -20,8 +32,7 @@
                                     <div class="ms-2 me-auto">
                                         <div class="fw-bold">{{ $item->nomColaborador }}</div>
                                         @if($item->visualization == '1')
-                                            <span
-                                                class="badge bg-danger">Registro inativado</span>
+                                            <span class="badge bg-danger">Registro inativado</span>
                                         @else
                                             <span
                                                 class="badge bg-success">{{ $item->presenter()->tagStatus($item->status) }}</span>
