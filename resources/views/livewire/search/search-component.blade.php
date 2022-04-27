@@ -35,7 +35,7 @@
                                             <span class="badge bg-danger">Registro inativado</span>
                                         @else
                                             <span
-                                                class="badge bg-success">{{ $item->presenter()->tagStatus($item->status) }}</span>
+                                                class="badge bg-success">{{ $item->presenter()->tagStatus($item->status, $item->standby) }}</span>
                                             {{ $item->presenter()->tagExam($item->retTipExa) }}
                                         @endif
                                     </div>
