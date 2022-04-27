@@ -57,7 +57,7 @@
                             </div>
                         </div>
                         <div class="flex-grow-1 overflow-hidden">
-                            <p class="mb-1">Agendados</p>
+                            <p class="mb-1">Kit Enviado</p>
                             <h5 class="mb-3">{{ $agendados }}</h5>
                         </div>
                     </div>

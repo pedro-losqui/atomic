@@ -44,6 +44,7 @@ class Record extends Model
         'status',
         'print',
         'visualization',
+        'standby',
         'datExe',
     ];
 

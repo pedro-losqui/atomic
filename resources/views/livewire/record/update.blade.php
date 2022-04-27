@@ -31,7 +31,7 @@
                                         <li class="nav-item">
                                             <a href="#progress-company-document" class="nav-link {{ $record->status == 2 ? 'active' : '' }}" data-toggle="tab">
                                                 <span class="step-number">02</span>
-                                                <span class="step-title">Agendado</span>
+                                                <span class="step-title">Kit Enviado</span>
                                             </a>
                                         </li>
 

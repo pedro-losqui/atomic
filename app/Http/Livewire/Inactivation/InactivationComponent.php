@@ -30,7 +30,7 @@ class InactivationComponent extends Component
        $data = $this->validate();
        $this->record->visualization = '1';
        $this->record->save();
-       $this->getInactivationMoviment($data);
+       $this->getInactivationMoviment(['note' => 'Registro inativado: ' . $data['note']]);
        $this->default();
        $this->modal('inactivationModal', 'hide');
     }

@@ -5,19 +5,19 @@
                 <div class="card-body">
                     <div class="row">
                         <div class="input-group">
-                            <input type="text" wire:model='search' wire:keydown.enter="searchRecord" class="form-control"
-                                placeholder="Localizar atendimento">
+                            <input type="text" wire:model='search' wire:keydown.enter="searchRecord"
+                                class="form-control" placeholder="Localizar atendimento">
                             @if($results)
                                 <button class="btn btn-primary" wire:click='clear' type="button"><i
                                         class="mdi mdi-close"></i></button>
                             @else
-                                <button class="btn btn-primary" wire:loading.remove wire:target="searchRecord" wire:click='searchRecord'
-                                    type="button">Pesquisar
+                                <button class="btn btn-primary" wire:loading.remove wire:target="searchRecord"
+                                    wire:click='searchRecord' type="button">Pesquisar
                                 </button>
                                 <button class="btn btn-primary" wire:loading wire:target="searchRecord" type="button">
                                     <div class="spinner-grow spinner-grow-sm" role="status">
                                         <span class="visually-hidden"></span>
-                                      </div>
+                                    </div>
                                 </button>
                             @endif
                         </div>

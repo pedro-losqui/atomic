@@ -106,7 +106,20 @@ class RecordComponent extends Component
 
         $this->record = Record::find($id);
         $this->modal('inactivationModal', 'show');
-        $this->getRecord();
+        $this->getRecord($id);
+    }
+
+    public function findRecordStandby($id)
+    {
+        $this->record = Record::find($id);
+        $this->modal('standbyModal', 'show');
+        $this->getRecordStandby();
+    }
+
+    public function findRecordActive($id)
+    {
+        $this->record = Record::find($id);
+        $this->getFindRecordActive();
     }
 
     public function modal($name, $action)
@@ -141,6 +154,16 @@ class RecordComponent extends Component
     public function getRecord()
     {
         $this->emit('getRecord', $this->record->id);
+    }
+
+    public function getRecordStandby()
+    {
+        $this->emit('getRecordStandby', $this->record->id);
+    }
+
+    public function getFindRecordActive()
+    {
+        $this->emit('getFindRecordActive', $this->record->id);
     }
 
     public function getStatus()

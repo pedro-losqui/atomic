@@ -4,30 +4,49 @@ namespace App\Presenters;
 
 class RecordPresenter
 {
-    public function alert($date, $status, $print)
+    public function alert($date, $created, $updated, $status)
     {
-        if ($status == 1 && $print == 0) {
-           return $date;
+        switch ($status) {
+            case '1':
+                if ($date > 2) {
+                  echo '<br><span class="badge bg-danger">Kit em atraso '. $created .'</span>';
+                }
+                break;
+            case '2':
+                if ($date > 2) {
+                  echo '<br><span class="badge bg-primary">Kit enviado '. $updated .'</span>';
+                }
+                break;
         }
     }
 
-    public function tagStatus($value)
+    public function showStandby($value)
     {
-        switch ($value) {
-            case 1:
-                return 'Solicitado';
-            break;
-            case 2:
-                return 'Agendado';
-            break;
-            case 3:
-                return 'ASO Recebido';
-            break;
-            case 4:
-                return 'Concluído';
-            break;
+        if ($value == 1) {
+           echo 'style="opacity: 0.6;"';
         }
+    }
 
+    public function tagStatus($value, $standby)
+    {
+        if ($standby == '1') {
+            echo '<span class="badge bg-danger">Em espera</span>';
+        }else{
+            switch ($value) {
+                case 1:
+                    return 'Solicitado';
+                break;
+                case 2:
+                    return 'Kit Enviado';
+                break;
+                case 3:
+                    return 'ASO Recebido';
+                break;
+                case 4:
+                    return 'Concluído';
+                break;
+            }
+        }
     }
 
     public function percentStatus($value)

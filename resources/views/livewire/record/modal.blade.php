@@ -144,7 +144,7 @@
                             <h4 class="card-title">Status atual:</h4>
                             <button type="button" class="btn btn-primary waves-effect waves-light">
                                 <i class="ri-error-warning-line align-middle me-2"></i>
-                                {{ $record->presenter()->tagStatus($record->status) }}
+                                {{ $record->presenter()->tagStatus($record->status, $record->standby) }}
                             </button>
                             <hr>
                             <livewire:moviment.moviment-component />

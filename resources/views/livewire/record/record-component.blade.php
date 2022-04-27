@@ -13,6 +13,7 @@
     @include('livewire.record.modal')
     @include('livewire.record.update')
     @include('livewire.record.inactivationModal')
+    @include('livewire.record.standbyModal')
 
     <div class="row">
         <div class="col-lg-12">
@@ -22,7 +23,8 @@
                         <div class="col-12">
                             <div class="input-group">
                                 <div class="input-group-text"><i class="ri-user-3-line"></i></div>
-                                <input type="search" wire:model='search' class="form-control" placeholder="Localizar colaborador">
+                                <input type="search" wire:model='search' class="form-control"
+                                    placeholder="Localizar colaborador">
                             </div>
                         </div>
                         <div class="col-12">
@@ -31,7 +33,7 @@
                                 <select wire:model='status' class="form-select">
                                     <option>Status</option>
                                     <option value="1" selected>Solicitado</option>
-                                    <option value="2">Agendado</option>
+                                    <option value="2">Kit Enviado</option>
                                     <option value="3">Recebido</option>
                                     <option value="4">Concluído</option>
                                 </select>
@@ -88,7 +90,7 @@
                             </thead>
                             <tbody>
                                 @forelse($records as $item)
-                                    <tr>
+                                    <tr {{ $item->presenter()->showStandby($item->standby) }}>
                                         <td>
                                             <h5 class="font-size-15 mb-0">{{ $item->nomColaborador }}</h5>
                                             <p class="mb-1 font-size-12">{{ $item->cpfColaborador }}</p>
@@ -96,7 +98,7 @@
                                         </td>
                                         <td>
                                             <p class="mb-1 font-size-12">Status</p>
-                                            {{ $item->presenter()->tagStatus($item->status) }}
+                                            {{ $item->presenter()->tagStatus($item->status, $item->standby) }}
                                         </td>
                                         <td>
                                             <p class="mb-1 font-size-12">Atendimento</p>
@@ -105,24 +107,37 @@
                                         <td>
                                             <p class="mb-1 font-size-12">Data Solicitação</p>
                                             {{ $item->created_at->format('d/m/Y') }}
-                                            @if ($item->presenter()->alert($item->created_at->diffInDays(), $item->status, $item->print) > 2)
-                                            <br><span class="badge bg-danger">Kit atrasado {{ $item->created_at->subDays(-2)->diffForHumans() }}</span>
-                                            @endif
+                                            {{ $item->presenter()->alert($item->created_at->diffInDays(), $item->created_at->diffForHumans(), $item->updated_at->diffForHumans(), $item->status) }}
                                         </td>
                                         <td>
-                                            <div class="btn-group btn-sm btn-group-toggle" data-bs-toggle="buttons">
-                                                <label class="btn btn-secondary">
-                                                    <input type="button" wire:click='find({{ $item->id }})' class="btn-check"> <i
-                                                        class="ri-attachment-2"></i>
+                                            <div class="btn-group btn-group-toggle mt-3" data-bs-toggle="buttons">
+                                                <label class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Solicitação">
+                                                    <input type="button" wire:click='find({{ $item->id }})'
+                                                        class="btn-check"> <i class="ri-attachment-2"></i>
                                                 </label>
-                                                <label class="btn btn-secondary">
-                                                    <input type="button" wire:click='findStatus({{ $item->id }})' class="btn-check"> <i
-                                                        class="ri-arrow-left-right-fill"></i>
-                                                </label>
-                                                <label class="btn btn-secondary">
-                                                    <input type="button" wire:click='findRecord({{ $item->id }})' class="btn-check"> <i
-                                                        class="ri-download-2-line"></i>
-                                                </label>
+                                                @if ($item->standby == '0')
+                                                    <label class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Movimentar">
+                                                        <input type="button" wire:click='findStatus({{ $item->id }})'
+                                                            class="btn-check"> <i class="ri-arrow-left-right-fill"></i>
+                                                    </label>
+                                                    <label class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Inativar">
+                                                        <input type="button" wire:click='findRecord({{ $item->id }})'
+                                                            class="btn-check"> <i class="ri-download-2-line"></i>
+                                                    </label>
+                                                @endif
+                                                @if($item->status == '1')
+                                                    @if ($item->standby == '1')
+                                                        <label class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Ativar">
+                                                            <input type="button" wire:click='findRecordActive({{ $item->id }})'
+                                                                class="btn-check"> <i class="ri-shut-down-line"></i>
+                                                        </label>
+                                                    @else
+                                                        <label class="btn btn-sm btn-secondary" data-bs-toggle="tooltip" data-bs-placement="top" data-bs-original-title="Standby">
+                                                            <input type="button" wire:click='findRecordStandby({{ $item->id }})'
+                                                                class="btn-check"> <i class="ri-timer-2-line"></i>
+                                                        </label>
+                                                    @endif
+                                                @endif
                                             </div>
                                         </td>
                                     </tr>

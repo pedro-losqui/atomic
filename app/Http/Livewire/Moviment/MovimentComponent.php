@@ -12,7 +12,7 @@ class MovimentComponent extends Component
 {
     public $moviment, $record_id;
 
-    protected $listeners = ['getMoviments', 'getInactivationMoviment', 'moviment', 'completion'];
+    protected $listeners = ['getMoviments', 'getInactivationMoviment', 'moviment', 'completion', 'getStandbyMoviment'];
 
     protected $rules = [
         'moviment.note' => 'required|string|min:4|max:250',
@@ -44,6 +44,15 @@ class MovimentComponent extends Component
         ]);
     }
 
+    public function getStandbyMoviment($record_id, $user_id, $note)
+    {
+        Moviment::create([
+            'user_id' =>  $user_id,
+            'record_id' => $record_id,
+            'note' => $note['note'],
+        ]);
+    }
+
     public function moviment($record_id, $user_id, $status)
     {
         Moviment::create([
@@ -57,7 +66,7 @@ class MovimentComponent extends Component
     {
         switch ($status) {
             case '2':
-                return 'O status do registro foi atualizado para agendado.';
+                return 'O status do registro foi atualizado para kit enviado.';
                 break;
             case '3':
                 return 'O status do registro foi atualizado para recebido.';
