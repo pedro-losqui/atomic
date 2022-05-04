@@ -16,6 +16,11 @@ class KitController extends Controller
     {
         $employee = Record::findOrFail($id);
         return view ('kits.index', compact('employee'));
+    }
 
+    public function kit()
+    {
+        $employee = Record::findOrFail('177');
+        return view ('kits.kit', compact('employee'));
     }
 }

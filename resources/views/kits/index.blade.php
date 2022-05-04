@@ -105,7 +105,7 @@
        <table id="T1" style="margin:0px 0px 5px;padding:0px;border:1px solid black;width:100%;text-align:center;font-family:'verdana';border-collapse:collapse" data-grupo="CABECALHO">
         <tbody>
          <tr style="height:15px">
-          <td class="ui-droppable" style="width:15%;text-align:center;vertical-align:top"><img title="Logo da Empresa Principal" src="https://sistema.soc.com.br/estatico/upload/empresas/143453/logos/relatorio/143453r1logorel.png" style="width:120px; height:100px;"></td>
+          <td class="ui-droppable" style="width:15%;text-align:center;vertical-align:top"><img title="Logo da Empresa Principal" src="{{ asset('assets/images/logo_soc_150x100.png') }}" style="width:150px; height:100px;"></td>
           <td class="ui-droppable" style="width:70%"><span style="color:rgb( 49 , 131 , 131 );font-family:'verdana';font-size:12pt;font-variant:small-caps;font-weight:bold;text-decoration:underline">A S O - Atestado de Saúde Ocupacional</span></td>
           <td class="ui-droppable" style="width:15%;text-align:right"></td>
          </tr>
@@ -137,7 +137,7 @@
          </tr>
          <tr style="height:15px">
           <td class="ui-droppable"><span>Unidade:</span></td>
-          <td class="ui-droppable"><span>{{ $employee->nomFilial }}</span></td>
+          <td class="ui-droppable"><span><span style="font-weight:bold">{{ $employee->nomFilial }}</span></td>
           <td class="ui-droppable"></td>
           <td class="ui-droppable"></td>
          </tr>
@@ -164,9 +164,9 @@
          </tr>
          <tr style="height:15px">
           <td class="ui-droppable"><span>RG:</span></td>
-          <td class="ui-droppable"><span>----</span></td>
+          <td class="ui-droppable"><span>N/A</span></td>
           <td class="ui-droppable"><span>Órgão Emissor:</span></td>
-          <td class="ui-droppable"><span>----</span></td>
+          <td class="ui-droppable"><span>N/A</span></td>
          </tr>
          <tr style="height:15px">
           <td class="ui-droppable"><span>CPF:</span></td>
@@ -415,8 +415,8 @@
                     <table cellspacing="0" cellpadding="0">
                         <tbody>
                             <tr>
-                                <td><img src="https://sistema.soc.com.br/estatico/upload/empresas/143453/logos/relatorio/143453r1logorel.png"
-                                        width="120" height="120"></td>
+                                <td><img src="{{ asset('assets/images/logo_soc_150x100.png') }}"
+                                        width="150" height="100"></td>
                             </tr>
                         </tbody>
                     </table>
@@ -751,8 +751,8 @@
                 <table cellspacing="0" cellpadding="0">
                     <tbody>
                         <tr>
-                            <td><img src="https://sistema.soc.com.br/estatico/upload/empresas/143453/logos/relatorio/143453r1logorel.png"
-                                    width="120" height="120"></td>
+                            <td><img src="{{ asset('assets/images/logo_soc_150x100.png') }}"
+                                    width="150" height="100"></td>
                         </tr>
                     </tbody>
                 </table>
@@ -1108,2193 +1108,566 @@
 </tbody></table>
 
 <table style="width: 100%; border: 0px; border-spacing: 0;" align="center">
-    <tbody>
-        <tr class="s1111">
-            <td class="s1111">
-                <table style="width: 100%; border: 0px;">
-                    <tbody>
-                        <tr>
-                            <td class="titesc" colspan="2" align="center"><b>Ficha Clínica</b></td>
-                        </tr>
-                        <tr>
-                            <td class="titclaro" colspan="2" align="center"><b>PREENCHIMENTO DO FUNCIONÁRIO</b></td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">DOENÇAS NA FAMÍLIA </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Tuberculose </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Derrame </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Pressão Alta </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Alcoolismo </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Câncer </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Diabetes </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Infarto </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Doença Nervosa </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Doença da Tireóide </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Alergias </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+    <tbody><tr class="s1111">
+        <td class="s1111">
+              <table style="width: 100%; border: 0px;">
+                <tbody><tr>
+                    <td class="titesc" colspan="2" align="center"><b>Ficha Clínica</b></td>
+                </tr>
+
+                    <tr>
+                        <td class="titclaro" colspan="2" align="center"><b>
+                            PREENCHIMENTO DO FUNCIONÁRIO</b>
+                        </td>
+                    </tr>
+
+
+
+                           <tr>
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Antecedentes pessoais/familiares
+
+
                             </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">HISTÓRIA SOCIAL </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Atividade física <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                nunca&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                fim de semana&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                eventual&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                3 a 4 x por semana&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                diariamente&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Marque se você fuma </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Se não fuma,
-                                                já fumou? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                sim&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                não&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Você foi ao dentista nos últimos
-                                                6 meses? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                sim&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                não&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Quanto tempo você leva ou levará
-                                                de casa ao trabalho? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                até 1/2 hora&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                de 1/2 a 1 hora&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                entre 1 e 2 horas&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                mais de 2 horas&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Afastamento pelo INSS
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Acidente de trabalho
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Internação prévia
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Cirurgia
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Doenças
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Uso de medicamentos
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+
+
+
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Saúde da mulher
+
+
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">MEIOS DE TRANSPORTE QUE UTILIZA
-                                                OU UTILIZARÁ PARA IR DE CASA AO TRABALHO </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ônibus </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Metrô </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Trem </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Carro </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Van ou similares </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Outros <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Métodos contraceptivos
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Data da última menstruação
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               ____/____/________
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+                             </tr>
+
+
+
+                           <tr>
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Histórico profissional e estilo de vida
+
+
                             </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">HÁBITOS DE LAZER </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Leitura </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Pintura </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ouvir música sem head-fone </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Instrumentos musicais </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Canto </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">TV </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Basquete/Volei </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ouvir música com head-fone </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Futebol </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Musculação </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Videogame </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Bordado/Tricô/Crochê </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Tênis </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Navegar na Internet </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Lutas </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Tempo de trabalho
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Última empresa
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Função
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Atividade insalubre ou perigosa
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Dores decorrente do emprego anterior
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Tabagista
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Sim&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Ex-tabagista&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Etilista
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Diariamente&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Eventualmente&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Atividade física
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Não&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Diariamente&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Eventualmente&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+
+                    <td width="50%" class="s0000"></td></tr>
+
+                    <tr>
+                        <td class="titclaro" colspan="2" align="center"><b>
+                            PREENCHIMENTO DO MÉDICO EXECUTOR</b>
+                        </td>
+                    </tr>
+
+
+
+                           <tr>
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+                                   Exame físico
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">HISTÓRIA OCUPACIONAL </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Além do trabalho nesta empresa,
-                                                você faz outros? </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Se positivo,
-                                                é igual ao que você faz nesta empresa? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você já trabalhou nesta função ou
-                                                semelhante em outra empresa </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Por quanto tempo? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Menos de 1 ano&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                De 1 a 2 anos&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Mais de 2 anos&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Já teve acidente de trabalho?
-                                            </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Se positivo,
-                                                ficou com lesão? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você já esteve afastado pelo
-                                                INSS? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Motivo <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Pele/Mucosa
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Cabeça/Pescoço
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Pulmão
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Coração
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Tórax
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Abdomem
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    MMII
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Ósteo-Artic
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Sist. Nerv
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Normal&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Alterado&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+
+
+
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Conclusões
+
+
                             </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">ANTECEDENTES PESSOAIS </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você usa óculos/lentes? </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você tem pressão alta? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você usa remédio para pressão?
-                                            </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você usa remédios por outros
-                                                motivos? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Quais? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você já teve Hepatite? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Se positivo,
-                                                qual tipo de Hepatite? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Você já foi operado? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">De que? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Em que ano? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Já quebrou algum osso? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Em que parte do corpo? <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Parecer
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;</div><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Apto&nbsp;</td></tr></tbody></table><table width="49%" border="0" color="FF3333" cellpadding="0" cellspacing="0" style="float: left;"><tbody><tr><td class="s0000" width="5%" style="border: solid 1px #000000; width: 29px;">&nbsp;</td><td class="s0000">&nbsp;Inapto&nbsp;</td></tr></tbody></table>
+                                        </td>
+                                    </tr>
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Observações
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+                             </tr>
+
+
+
+                           <tr>
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Assinaturas
+
+
                             </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Você sente dores em algum destes
-                                                locais? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Dedos (Lado direito) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Mãos (Lado direito) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Punho (Lado direito) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cotovelo (Lado direito) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Antebraço/Braço (Lado direito)
-                                            </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ombro (Lado direito) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Joelho (Lado direito) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Dedos (Lado esquerdo) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Mãos (Lado esquerdo) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Punho (Lado esquerdo) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cotovelo (Lado esquerdo) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Antebraço/Braço (Lado esquerdo)
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ombro (Lado esquerdo) </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Joelho (Lado esquerdo) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Pescoço </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Costas </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Lombar </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Carimbo e Assinatura do Médico Examinador
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+
+
+
+                         <td class="s1111" style="vertical-align: top; width: 50%;">
+                             <table style="width: 100%;">
+                             <tbody><tr>
+
+                                 <td width="100%" colspan="4" class="s0111">
+
+
+                                   Assinatura
+
+
                             </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">SOMENTE PARA HOMENS: </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Próstata examinada no último ano?
-                                                <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Sim&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Não&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">As declarações acima são
-                                                verdadeiras </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Assinatura do(a) Candidato(a) /
-                                                Empregado(a) <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td width="50%" class="s0000"></td>
-                        </tr>
-                        <tr>
-                            <td class="titclaro" colspan="2" align="center"><b>PREENCHIMENTO DO MÉDICO EXECUTOR</b></td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Exame Físico (Marque somente se a
-                                                resposta for "Sim"ou "Alterado") </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Marcha </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Observações <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Mucosas </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Dermatose </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Gânglios </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Tireóide </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Problemas/Tratamento Dentário
-                                            </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Orofaringe </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Acuidade Visual </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Uso de lentes corretivas <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Sim&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Não&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Rítmo cardíaco,
-                                                regular em 2 T? </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">BNF </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Sopros </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Pulmões </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Abdomen </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Observações <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cotovelo Direito </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cotovelo Esquerdo </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ombro Direito </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Ombro Esquerdo </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Joelho Direito </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Joelho Esquerdo </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Membros superiores - Mãos e
-                                                Punhos: </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Normais </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cistos sinoviais </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cicatrizes </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Perda da força de preensão </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Crepitação </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Fraturas </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Dor </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Tinel </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Phalen </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Filkenstein </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Coluna </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Normal </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Escoliose </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Cifose </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Lordose </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Contratura supra-escapular à
-                                                direita </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Contratura supra-escapular à
-                                                esquerda </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Outros <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Aparelho Muscular </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Normal </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Hipotrofias </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Atrofias </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Observações <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Membros Inferiores </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Normais </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Varizes </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Edemas </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Outros <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Pessoa Portadora de Deficiência
-                                                (Dec. 5.296/04) </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Deficiente: </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Tipo de Deficiência <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Solicitações: </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Solicitado exame complementar?
-                                            </td>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Solicitado parecer do
-                                                especialista? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Especialidade: <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="10%" valign="top">
-                                                <table width="50%" style=" width: 29px;" border="0" color="FF3333"
-                                                    cellpadding="0" cellspacing="0">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td width="5%" class="s0110"
-                                                                style="border: solid 1px; width: 29px;"><span
-                                                                    style="color: white;">___</span></td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                            <td width="40%" valign="top" class="s0000">Encaminhamento ao perito? </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Especialidade do perito: <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Conclusões </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Parecer <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0">
-                                                <div style="clear: both; height: 5px; float: none; width: 100%;">&nbsp;
-                                                </div>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Apto&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                                <table width="49%" border="0" color="FF3333" cellpadding="0"
-                                                    cellspacing="0" style="float: left;">
-                                                    <tbody>
-                                                        <tr>
-                                                            <td class="s0000" width="5%"
-                                                                style="border: solid 1px #000000; width: 29px;">&nbsp;
-                                                            </td>
-                                                            <td class="s0000">&nbsp;
-                                                                Inapto&nbsp;
-                                                            </td>
-                                                        </tr>
-                                                    </tbody>
-                                                </table>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Observações <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="s1111" style="vertical-align: top; width: 50%;">
-                                <table style="width: 100%;">
-                                    <tbody>
-                                        <tr>
-                                            <td width="100%" colspan="4" class="s0111">Assinaturas </td>
-                                        </tr>
-                                        <tr>
-                                            <td width="100%" class="s0000" colspan="4">Carimbo e Assinatura do Médico
-                                                Examinador <img
-                                                    src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif"
-                                                    border="0"><br>___________________________________________________<br>
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-                            </td>
-                            <td width="50%" class="s0000"></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </td>
-        </tr>
-    </tbody>
-</table>
+                         </tr>
+
+
+
+
+
+                                    <tr>
+                                        <td width="100%" class="s0000" colspan="4">
+
+                                                    Assinatura do Funcionário
+                                                    <img src="https://sistema.soc.com.br/estatico/webcontext/imagens/setadireita2.gif" border="0">
+
+                                               <br>___________________________________________________<br>
+                                        </td>
+                                    </tr>
+
+
+
+                               </tbody></table>
+                         </td>
+
+                             </tr>
+
+
+
+
+             </tbody></table>
+        </td>
+    </tr>
+</tbody></table>
