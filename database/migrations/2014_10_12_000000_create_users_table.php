@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('password');
             $table->enum('status', ['0', '1'])->default('1');
             $table->string('avatar')->default('assets/images/users/avatar-0.jpg');
+            $table->string('session_id', 150)->nullable();
             $table->timestamps();
         });
     }

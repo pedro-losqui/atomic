@@ -37,6 +37,15 @@
                             <i class="mdi mdi-account-details me-2"></i>Usuários
                         </a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle arrow-none" href="javascript:void(0);" id="topnav-apps" role="button">
+                            <i class="mdi mdi-tools me-2"></i>Ferramentas <div class="arrow-down"></div>
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="topnav-apps">
+                            <a href="#" class="dropdown-item">Envio de e-mail</a>
+                            <a href="#" class="dropdown-item">Sessões</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
         </nav>

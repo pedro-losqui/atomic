@@ -30,51 +30,51 @@ class HeaderCountComponent extends Component
 
     public function countSolicitados()
     {
-        $this->solicitados = count(Record::where('status', 1)->where('visualization', '0')->get());
+        $this->solicitados = count(Record::where('status', '1')->where('visualization', '0')->get());
     }
 
     public function countAgendados()
     {
-        $this->agendados = count(Record::where('status', 2)->where('visualization', '0')->get());
+        $this->agendados = count(Record::where('status', '2')->where('visualization', '0')->get());
     }
 
     public function countRecebidos()
     {
-        $this->recebidos = count(Record::where('status', 3)->where('visualization', '0')->get());
+        $this->recebidos = count(Record::where('status', '3')->where('visualization', '0')->get());
     }
 
     public function countConcluidos()
     {
-        $this->concluidos = count(Record::where('status', 4)->where('visualization', '0')->get());
+        $this->concluidos = count(Record::where('status', '4')->where('visualization', '0')->get());
     }
 
     public function countAdmissional()
     {
-        $this->admissional = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '1')->get());
+        $this->admissional = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '1')->get());
     }
 
     public function countPeriodico()
     {
-        $this->periodico = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '2')->get());
+        $this->periodico = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '2')->get());
     }
 
     public function countMudanca()
     {
-        $this->mudanca = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '3')->get());
+        $this->mudanca = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '3')->get());
     }
 
     public function countRetorno()
     {
-        $this->retorno = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '4')->get());
+        $this->retorno = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '4')->get());
     }
 
     public function countDemissional()
     {
-        $this->demissional = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '5')->get());
+        $this->demissional = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '5')->get());
     }
 
     public function countTransferencia()
     {
-        $this->transferencia = count(Record::where('status', 1)->where('visualization', '0')->where('retTipExa', '6')->get());
+        $this->transferencia = count(Record::where('status', '1')->where('visualization', '0')->where('retTipExa', '6')->get());
     }
 }

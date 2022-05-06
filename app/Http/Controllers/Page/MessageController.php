@@ -8,7 +8,7 @@ class MessageController extends Controller
 {
     public function __construct()
     {
-        $this->middleware('auth');
+        $this->middleware(['auth', 'checksinglesession']);
     }
 
     public function index()
